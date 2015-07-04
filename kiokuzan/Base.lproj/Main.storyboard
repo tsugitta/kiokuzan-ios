@@ -18,7 +18,8 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C30-3P-YZh" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
-                                <rect key="frame" x="46" y="314" width="283" height="40"/>
+                                <rect key="frame" x="56" y="314" width="263" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zdb-Q7-gzz"/>
                                 </constraints>
@@ -41,13 +42,36 @@
                                     <segue destination="bmQ-bR-c5u" kind="presentation" modalTransitionStyle="crossDissolve" id="Vin-5D-ssq"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="k i o k u z a n " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFD-L3-a6K">
+                                <rect key="frame" x="21" y="80" width="333" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="mDl-it-Z1r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="55"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dFD-L3-a6K" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="1ub-bY-GgT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="30" id="AFi-Ux-3ck"/>
                             <constraint firstAttribute="centerY" secondItem="C30-3P-YZh" secondAttribute="centerY" id="LVf-p3-3aI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dFD-L3-a6K" secondAttribute="trailing" constant="5" id="PBT-3c-Ygu"/>
+                            <constraint firstItem="dFD-L3-a6K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="Yrc-Le-W7e"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="eqy-Q6-3b4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="iYf-fg-W4j"/>
+                            <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="kjP-yG-Gq5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dFD-L3-a6K" secondAttribute="trailing" constant="20" id="wBB-PG-lPT"/>
+                            <constraint firstItem="dFD-L3-a6K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="zp5-lt-tTk"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="wBB-PG-lPT"/>
+                                <exclude reference="zp5-lt-tTk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -71,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUh-lh-4aB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790.5" y="357.5"/>
+            <point key="canvasLocation" x="791.5" y="478.5"/>
         </scene>
     </scenes>
 </document>

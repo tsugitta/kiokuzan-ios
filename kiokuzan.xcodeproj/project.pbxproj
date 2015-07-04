@@ -14,6 +14,7 @@
 		DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF43C3E71B47D9F80018484B /* LaunchScreen.xib */; };
 		DF43C3F51B47D9F80018484B /* kiokuzanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */; };
 		DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3FE1B47DADD0018484B /* PlayViewController.swift */; };
+		DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4001B47DFCA0018484B /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DF43C3F31B47D9F80018484B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiokuzanTests.swift; sourceTree = "<group>"; };
 		DF43C3FE1B47DADD0018484B /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		DF43C4001B47DFCA0018484B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
 				DF43C3E21B47D9F80018484B /* Main.storyboard */,
 				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
+				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
 				DF43C3E51B47D9F80018484B /* Images.xcassets */,
 				DF43C3E71B47D9F80018484B /* LaunchScreen.xib */,
 				DF43C3DC1B47D9F80018484B /* Supporting Files */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */,
 				DF43C3E11B47D9F80018484B /* TopViewController.swift in Sources */,
 				DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */,
 				DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */,

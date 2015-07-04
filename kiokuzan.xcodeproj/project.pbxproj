@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3DE1B47D9F80018484B /* AppDelegate.swift */; };
+		DF43C3E11B47D9F80018484B /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3E01B47D9F80018484B /* TopViewController.swift */; };
+		DF43C3E41B47D9F80018484B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF43C3E21B47D9F80018484B /* Main.storyboard */; };
+		DF43C3E61B47D9F80018484B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF43C3E51B47D9F80018484B /* Images.xcassets */; };
+		DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF43C3E71B47D9F80018484B /* LaunchScreen.xib */; };
+		DF43C3F51B47D9F80018484B /* kiokuzanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */; };
+		DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3FE1B47DADD0018484B /* PlayViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF43C3EF1B47D9F80018484B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF43C3D11B47D9F70018484B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF43C3D81B47D9F70018484B;
+			remoteInfo = kiokuzan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF43C3D91B47D9F80018484B /* kiokuzan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiokuzan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF43C3DD1B47D9F80018484B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF43C3DE1B47D9F80018484B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF43C3E01B47D9F80018484B /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		DF43C3E31B47D9F80018484B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF43C3E51B47D9F80018484B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DF43C3E81B47D9F80018484B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DF43C3EE1B47D9F80018484B /* kiokuzanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kiokuzanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF43C3F31B47D9F80018484B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiokuzanTests.swift; sourceTree = "<group>"; };
+		DF43C3FE1B47DADD0018484B /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF43C3D61B47D9F70018484B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF43C3EB1B47D9F80018484B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF43C3D01B47D9F70018484B = {
+			isa = PBXGroup;
+			children = (
+				DF43C3DB1B47D9F80018484B /* kiokuzan */,
+				DF43C3F11B47D9F80018484B /* kiokuzanTests */,
+				DF43C3DA1B47D9F80018484B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF43C3DA1B47D9F80018484B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3D91B47D9F80018484B /* kiokuzan.app */,
+				DF43C3EE1B47D9F80018484B /* kiokuzanTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF43C3DB1B47D9F80018484B /* kiokuzan */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
+				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
+				DF43C3E21B47D9F80018484B /* Main.storyboard */,
+				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
+				DF43C3E51B47D9F80018484B /* Images.xcassets */,
+				DF43C3E71B47D9F80018484B /* LaunchScreen.xib */,
+				DF43C3DC1B47D9F80018484B /* Supporting Files */,
+			);
+			path = kiokuzan;
+			sourceTree = "<group>";
+		};
+		DF43C3DC1B47D9F80018484B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3DD1B47D9F80018484B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF43C3F11B47D9F80018484B /* kiokuzanTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */,
+				DF43C3F21B47D9F80018484B /* Supporting Files */,
+			);
+			path = kiokuzanTests;
+			sourceTree = "<group>";
+		};
+		DF43C3F21B47D9F80018484B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3F31B47D9F80018484B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF43C3D81B47D9F70018484B /* kiokuzan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF43C3F81B47D9F80018484B /* Build configuration list for PBXNativeTarget "kiokuzan" */;
+			buildPhases = (
+				DF43C3D51B47D9F70018484B /* Sources */,
+				DF43C3D61B47D9F70018484B /* Frameworks */,
+				DF43C3D71B47D9F70018484B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kiokuzan;
+			productName = kiokuzan;
+			productReference = DF43C3D91B47D9F80018484B /* kiokuzan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF43C3ED1B47D9F80018484B /* kiokuzanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF43C3FB1B47D9F80018484B /* Build configuration list for PBXNativeTarget "kiokuzanTests" */;
+			buildPhases = (
+				DF43C3EA1B47D9F80018484B /* Sources */,
+				DF43C3EB1B47D9F80018484B /* Frameworks */,
+				DF43C3EC1B47D9F80018484B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF43C3F01B47D9F80018484B /* PBXTargetDependency */,
+			);
+			name = kiokuzanTests;
+			productName = kiokuzanTests;
+			productReference = DF43C3EE1B47D9F80018484B /* kiokuzanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF43C3D11B47D9F70018484B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = sdklt;
+				TargetAttributes = {
+					DF43C3D81B47D9F70018484B = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					DF43C3ED1B47D9F80018484B = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = DF43C3D81B47D9F70018484B;
+					};
+				};
+			};
+			buildConfigurationList = DF43C3D41B47D9F70018484B /* Build configuration list for PBXProject "kiokuzan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF43C3D01B47D9F70018484B;
+			productRefGroup = DF43C3DA1B47D9F80018484B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF43C3D81B47D9F70018484B /* kiokuzan */,
+				DF43C3ED1B47D9F80018484B /* kiokuzanTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF43C3D71B47D9F70018484B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF43C3E41B47D9F80018484B /* Main.storyboard in Resources */,
+				DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */,
+				DF43C3E61B47D9F80018484B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF43C3EC1B47D9F80018484B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF43C3D51B47D9F70018484B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF43C3E11B47D9F80018484B /* TopViewController.swift in Sources */,
+				DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */,
+				DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF43C3EA1B47D9F80018484B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF43C3F51B47D9F80018484B /* kiokuzanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF43C3F01B47D9F80018484B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF43C3D81B47D9F70018484B /* kiokuzan */;
+			targetProxy = DF43C3EF1B47D9F80018484B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF43C3E21B47D9F80018484B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF43C3E31B47D9F80018484B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF43C3E71B47D9F80018484B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF43C3E81B47D9F80018484B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF43C3F61B47D9F80018484B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DF43C3F71B47D9F80018484B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF43C3F91B47D9F80018484B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kiokuzan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DF43C3FA1B47D9F80018484B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kiokuzan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DF43C3FC1B47D9F80018484B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = kiokuzanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kiokuzan.app/kiokuzan";
+			};
+			name = Debug;
+		};
+		DF43C3FD1B47D9F80018484B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = kiokuzanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kiokuzan.app/kiokuzan";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF43C3D41B47D9F70018484B /* Build configuration list for PBXProject "kiokuzan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF43C3F61B47D9F80018484B /* Debug */,
+				DF43C3F71B47D9F80018484B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF43C3F81B47D9F80018484B /* Build configuration list for PBXNativeTarget "kiokuzan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF43C3F91B47D9F80018484B /* Debug */,
+				DF43C3FA1B47D9F80018484B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DF43C3FB1B47D9F80018484B /* Build configuration list for PBXNativeTarget "kiokuzanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF43C3FC1B47D9F80018484B /* Debug */,
+				DF43C3FD1B47D9F80018484B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF43C3D11B47D9F70018484B /* Project object */;
+}

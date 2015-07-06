@@ -64,7 +64,7 @@ class Question: NSObject {
       self.second_item = 0
     }
   }
-  
+
   class func generateQuestionArray() -> [Question] {
     var question_array: [Question] = []
     for i in 1...30 {

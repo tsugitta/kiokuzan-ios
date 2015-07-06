@@ -17,6 +17,7 @@
 		DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4001B47DFCA0018484B /* CustomButton.swift */; };
 		DF43C4031B47F3520018484B /* InputBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4021B47F3520018484B /* InputBoard.swift */; };
 		DF43C4051B48E3A30018484B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4041B48E3A30018484B /* Question.swift */; };
+		DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DF43C4001B47DFCA0018484B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DF43C4021B47F3520018484B /* InputBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBoard.swift; sourceTree = "<group>"; };
 		DF43C4041B48E3A30018484B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountDownViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
 				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
 				DF43C3E51B47D9F80018484B /* Images.xcassets */,
+				DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */,
 				DF43C3E71B47D9F80018484B /* LaunchScreen.xib */,
 				DF43C3DC1B47D9F80018484B /* Supporting Files */,
 			);
@@ -230,6 +233,7 @@
 				DF43C4051B48E3A30018484B /* Question.swift in Sources */,
 				DF43C4031B47F3520018484B /* InputBoard.swift in Sources */,
 				DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */,
+				DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +429,7 @@
 				DF43C3FA1B47D9F80018484B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF43C3FB1B47D9F80018484B /* Build configuration list for PBXNativeTarget "kiokuzanTests" */ = {
 			isa = XCConfigurationList;
@@ -433,6 +438,7 @@
 				DF43C3FD1B47D9F80018484B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

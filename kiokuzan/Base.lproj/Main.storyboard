@@ -23,7 +23,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zdb-Q7-gzz"/>
                                 </constraints>
-                                <state key="normal" title="Start">
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                <state key="normal" title="S t a r t">
                                     <color key="titleColor" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -43,7 +44,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="k i o k u z a n " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFD-L3-a6K">
-                                <rect key="frame" x="21" y="80" width="333" height="70"/>
+                                <rect key="frame" x="21" y="140" width="333" height="70"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <constraints>
@@ -52,15 +53,29 @@
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="55"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-BO-r5P">
+                                <rect key="frame" x="36" y="264" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QU5-8J-Ftz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.5698841831140351" green="0.66666666666666663" blue="0.66666666666666663" alpha="0.69000000000000006" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dFD-L3-a6K" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="1ub-bY-GgT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="30" id="AFi-Ux-3ck"/>
+                            <constraint firstItem="dFD-L3-a6K" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="1ub-bY-GgT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="AFi-Ux-3ck"/>
+                            <constraint firstItem="C30-3P-YZh" firstAttribute="top" secondItem="rlC-BO-r5P" secondAttribute="bottom" constant="10" id="ATW-RF-t4Y"/>
+                            <constraint firstItem="rlC-BO-r5P" firstAttribute="top" secondItem="dFD-L3-a6K" secondAttribute="bottom" constant="40" id="IEe-mW-zNr"/>
                             <constraint firstAttribute="centerY" secondItem="C30-3P-YZh" secondAttribute="centerY" id="LVf-p3-3aI"/>
+                            <constraint firstItem="rlC-BO-r5P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="OBg-bN-d5Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dFD-L3-a6K" secondAttribute="trailing" constant="5" id="PBT-3c-Ygu"/>
+                            <constraint firstItem="rlC-BO-r5P" firstAttribute="top" secondItem="dFD-L3-a6K" secondAttribute="bottom" constant="20" id="PaF-6o-ZFO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rlC-BO-r5P" secondAttribute="trailing" constant="20" id="RGP-jp-yYu"/>
                             <constraint firstItem="dFD-L3-a6K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="Yrc-Le-W7e"/>
-                            <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="30" id="eqy-Q6-3b4"/>
+                            <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="eqy-Q6-3b4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="iYf-fg-W4j"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="kjP-yG-Gq5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dFD-L3-a6K" secondAttribute="trailing" constant="20" id="wBB-PG-lPT"/>
@@ -70,6 +85,10 @@
                             <mask key="constraints">
                                 <exclude reference="wBB-PG-lPT"/>
                                 <exclude reference="zp5-lt-tTk"/>
+                                <exclude reference="IEe-mW-zNr"/>
+                                <exclude reference="PaF-6o-ZFO"/>
+                                <exclude reference="iYf-fg-W4j"/>
+                                <exclude reference="kjP-yG-Gq5"/>
                             </mask>
                         </variation>
                     </view>

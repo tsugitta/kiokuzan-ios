@@ -15,6 +15,8 @@
 		DF43C3F51B47D9F80018484B /* kiokuzanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */; };
 		DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3FE1B47DADD0018484B /* PlayViewController.swift */; };
 		DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4001B47DFCA0018484B /* CustomButton.swift */; };
+		DF43C4031B47F3520018484B /* InputBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4021B47F3520018484B /* InputBoard.swift */; };
+		DF43C4051B48E3A30018484B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4041B48E3A30018484B /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		DF43C3F41B47D9F80018484B /* kiokuzanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kiokuzanTests.swift; sourceTree = "<group>"; };
 		DF43C3FE1B47DADD0018484B /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		DF43C4001B47DFCA0018484B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DF43C4021B47F3520018484B /* InputBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBoard.swift; sourceTree = "<group>"; };
+		DF43C4041B48E3A30018484B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
 				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
 				DF43C3E21B47D9F80018484B /* Main.storyboard */,
+				DF43C4041B48E3A30018484B /* Question.swift */,
+				DF43C4021B47F3520018484B /* InputBoard.swift */,
 				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
 				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
 				DF43C3E51B47D9F80018484B /* Images.xcassets */,
@@ -221,6 +227,8 @@
 				DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */,
 				DF43C3E11B47D9F80018484B /* TopViewController.swift in Sources */,
 				DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */,
+				DF43C4051B48E3A30018484B /* Question.swift in Sources */,
+				DF43C4031B47F3520018484B /* InputBoard.swift in Sources */,
 				DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

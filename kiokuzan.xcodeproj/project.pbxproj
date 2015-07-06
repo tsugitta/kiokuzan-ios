@@ -87,15 +87,12 @@
 		DF43C3DB1B47D9F80018484B /* kiokuzan */ = {
 			isa = PBXGroup;
 			children = (
-				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
-				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
+				DFA4664B1B4B09F40061D3F5 /* Model */,
+				DFA4664A1B4B09D90061D3F5 /* Controller */,
+				DFA4664C1B4B0A000061D3F5 /* ViewItems */,
 				DF43C3E21B47D9F80018484B /* Main.storyboard */,
-				DF43C4041B48E3A30018484B /* Question.swift */,
-				DF43C4021B47F3520018484B /* InputBoard.swift */,
-				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
-				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
+				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
 				DF43C3E51B47D9F80018484B /* Images.xcassets */,
-				DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */,
 				DF43C3E71B47D9F80018484B /* LaunchScreen.xib */,
 				DF43C3DC1B47D9F80018484B /* Supporting Files */,
 			);
@@ -125,6 +122,33 @@
 				DF43C3F31B47D9F80018484B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFA4664A1B4B09D90061D3F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
+				DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */,
+				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DFA4664B1B4B09F40061D3F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C4041B48E3A30018484B /* Question.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DFA4664C1B4B0A000061D3F5 /* ViewItems */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C4021B47F3520018484B /* InputBoard.swift */,
+				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
+			);
+			name = ViewItems;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

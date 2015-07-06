@@ -12,7 +12,8 @@ class PlayViewController: UIViewController {
 
     override func viewDidLoad() {
       super.viewDidLoad()
-      println("play")
+      let inputBoard = InputBoard()
+      self.view.addSubview(inputBoard)
       
     }
 

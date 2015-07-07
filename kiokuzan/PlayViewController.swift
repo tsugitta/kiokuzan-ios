@@ -17,6 +17,10 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   var nextButtonBoard: NextButtonBoard!
   var inputBoard: InputBoard!
   var questionView: UIView!
+  var timerLabel: UILabel!
+  var questionNumberLabel: UILabel!
+  var questionLabel: LTMorphingLabel!
+  var answerNumberLabel: UILabel!
   
   var questionArray: [Question] = []
   var totalQuestionNumber: Int!
@@ -38,7 +42,12 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     self.inputBoard = InputBoard(screenWidth: self.screenWidth, screenHeight: self.screenHeight, viewHeight: self.inputHeight)
     self.inputBoard.delegate = self
     self.questionView = UINib(nibName: "QuestionView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
-    (self.questionView.viewWithTag(3) as! LTMorphingLabel).text = ""
+    self.timerLabel = self.questionView.viewWithTag(1) as! UILabel
+    self.questionNumberLabel = self.questionView.viewWithTag(2) as! UILabel
+    self.questionLabel = self.questionView.viewWithTag(3) as! LTMorphingLabel
+    self.answerNumberLabel = self.questionView.viewWithTag(4) as! UILabel
+    self.questionLabel.text = ""
+    self.questionLabel.morphingEffect = .Evaporate
 
     // 問題作成
     switch self.backNumber {
@@ -85,16 +94,16 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   func updateQuestionView() {
     if self.currentQuestionNumber <= self.totalQuestionNumber {
       var currentQuestion = self.questionArray[self.currentQuestionNumber - 1]
-      (self.questionView.viewWithTag(2) as! UILabel).text = "Q\(self.currentQuestionNumber)"
-      (self.questionView.viewWithTag(3) as! LTMorphingLabel).text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
+      self.questionNumberLabel.text = "Q\(self.currentQuestionNumber)"
+      self.questionLabel.text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
     } else {
-      (self.questionView.viewWithTag(2) as! UILabel).text = ""
-      (self.questionView.viewWithTag(3) as! LTMorphingLabel).text = "Hang in there!"
+      self.questionNumberLabel.text = ""
+      self.questionLabel.text = "Hang in there!"
     }
     if self.currentAnswerNumber > 0 {
-      (self.questionView.viewWithTag(4) as! UILabel).text = "Answer Q\(self.currentAnswerNumber)."
+      self.answerNumberLabel.text = "Answer Q\(self.currentAnswerNumber)."
     } else {
-      (self.questionView.viewWithTag(4) as! UILabel).text = ""
+      self.answerNumberLabel.text = ""
     }
   }
   
@@ -137,7 +146,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     let ms = countNum % 100
     let s = (countNum - ms) / 100 % 60
     let m = (countNum - s - ms) / 6000 % 3600
-    (self.questionView.viewWithTag(1) as! UILabel).text = String(format: "%02d:%02d.%02d", m, s, ms)
+    self.timerLabel.text = String(format: "%02d:%02d.%02d", m, s, ms)
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

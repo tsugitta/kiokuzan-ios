@@ -9,17 +9,18 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+  @IBOutlet weak var backLabel: UILabel!
+  @IBOutlet weak var scoreLabel: UILabel!
+  @IBOutlet weak var missLabel: UILabel!
+  @IBOutlet weak var highScoreLabel: UILabel!
   var timerCountNum: Int!
   var missCount: Int!
   var backNumber: Int!
   
-  @IBOutlet weak var scoreLabel: UILabel!
-  @IBOutlet weak var missLabel: UILabel!
-  @IBOutlet weak var highScoreLabel: UILabel!
-  
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    self.backLabel.text = "\(self.backNumber) back"
     self.scoreLabel.text = convertTimerCountNumToString(timerCountNum)
     self.missLabel.text = "(miss: \(self.missCount))"
     
@@ -29,7 +30,7 @@ class ResultViewController: UIViewController {
       highScoreCountNum = timerCountNum
       defaults.setObject(highScoreCountNum, forKey: "\(backNumber)BackHighScoreCountNum")
     }
-    self.highScoreLabel.text = "High Score: \(convertTimerCountNumToString(highScoreCountNum as! Int))"
+    self.highScoreLabel.text = "High Score \(convertTimerCountNumToString(highScoreCountNum as! Int))"
   }
 
   func convertTimerCountNumToString(countNum: Int) -> String {

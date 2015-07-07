@@ -12,7 +12,6 @@ class TopViewController: UIViewController {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var numberOfQuestions: UILabel!
   @IBOutlet weak var highScoreLabel: UILabel!
-  @IBOutlet weak var highScoreTime: LTMorphingLabel!
   var backNumber = 3
 
   override func viewDidLoad() {
@@ -23,8 +22,6 @@ class TopViewController: UIViewController {
     let customLetterSpacing = 4.5
     attributedText.addAttribute(NSKernAttributeName, value: customLetterSpacing, range: NSMakeRange(0, attributedText.length))
     titleLabel.attributedText = attributedText
-    
-    highScoreTime.morphingEffect = .Evaporate
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -42,11 +39,9 @@ class TopViewController: UIViewController {
     let defaults = NSUserDefaults.standardUserDefaults()
     var highScoreCountNum: AnyObject! = defaults.objectForKey("\(backNumber)BackHighScoreCountNum")
     if highScoreCountNum != nil {
-      highScoreLabel.text = "High Score"
-      highScoreTime.text = "\(convertTimerCountNumToString(highScoreCountNum as! Int))"
+      highScoreLabel.text = "High Score \(convertTimerCountNumToString(highScoreCountNum as! Int))"
     } else {
       highScoreLabel.text = ""
-      highScoreTime.text = ""
     }
   }
   

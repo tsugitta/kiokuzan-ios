@@ -27,7 +27,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   
   var timerCountNum: Int = 0
   var timer = NSTimer()
-  var missPenaltySecond = 5
+  var missPenaltySecond = 10
   
   override func viewDidLoad() {
     super.viewDidLoad()

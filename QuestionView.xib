@@ -62,7 +62,7 @@
                             <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="7"/>
+                            <real key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                             <color key="value" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>

@@ -31,7 +31,7 @@ class StartCountDownViewController: UIViewController  {
   }
   
   override func viewDidAppear(animated: Bool) {
-    if self.animated == false { // unWind時に実行されないように
+    if !self.animated { // unWind時に実行されないように
       self.animated = true
       countDownNum = countDownMax
       countNumberLabel.text = String(countDownNum)

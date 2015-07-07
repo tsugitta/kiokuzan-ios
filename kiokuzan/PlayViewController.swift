@@ -89,7 +89,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
       self.timerCountNum += self.missPenaltySecond * 100
     } else {
       var inputNumber = numberText.toInt()
-      if (self.questionArray[self.currentQuestionNumber - self.backNumber - 1].answer != inputNumber) {
+      if self.questionArray[self.currentQuestionNumber - self.backNumber - 1].answer != inputNumber {
         self.missCount++
         self.timerCountNum += self.missPenaltySecond * 100
       }

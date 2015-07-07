@@ -25,7 +25,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   var currentAnswerNumber: Int = 0
   var missCount: Int = 0
   
-  var timerCountNum:Int = 0
+  var timerCountNum: Int = 0
   var timer = NSTimer()
   var missPenaltySecond = 5
   
@@ -123,10 +123,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
     if segue.identifier == "fromPlayToResultSegue" {
-      // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
       var resultView :ResultViewController = segue.destinationViewController as! ResultViewController
-      // secondView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）
-      // この時SecondViewControllerにて受け取る同型の変数を用意しておかないとエラーになる
       resultView.timerCountNum = self.timerCountNum
       resultView.missCount = self.missCount
     }

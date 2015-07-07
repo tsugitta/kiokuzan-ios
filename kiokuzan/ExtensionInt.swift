@@ -10,7 +10,7 @@ import UIKit
 
 extension Int {
   func returnRandomDivisoraFactor() -> Int {
-    if (self <= 0) {
+    if self <= 0 {
       return Int(0)
     } else {
       var divisora_factors: [Int] = []

@@ -7,17 +7,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="-1" width="600" height="372"/>
+            <rect key="frame" x="7" y="0.0" width="445" height="372"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5K-sd-oH2">
-                    <rect key="frame" x="289" y="129" width="22" height="21"/>
+                    <rect key="frame" x="212" y="129" width="22" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 1 = ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8B-Yh-Cmg">
-                    <rect key="frame" x="175" y="160" width="250" height="52"/>
+                    <rect key="frame" x="98" y="160" width="250" height="52"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="4py-CS-5Ni"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZXE-G8-Tbh"/>
@@ -33,28 +33,60 @@
                     </variation>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Q1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-x1-NWX">
-                    <rect key="frame" x="261" y="351" width="78" height="21"/>
+                    <rect key="frame" x="184" y="351" width="78" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgU-Bx-FVX">
-                    <rect key="frame" x="255" y="10" width="90" height="28"/>
+                    <rect key="frame" x="178" y="10" width="90" height="28"/>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfz-J6-F90" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
+                    <rect key="frame" x="10" y="10" width="80" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="srf-CI-Tdp"/>
+                        <constraint firstAttribute="height" constant="40" id="vsc-tZ-RiA"/>
+                        <constraint firstAttribute="height" constant="40" id="w2l-2A-sXV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                    <state key="normal" title="B a c k">
+                        <color key="titleColor" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="w2l-2A-sXV"/>
+                        </mask>
+                    </variation>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="WRN-x1-NWX" secondAttribute="bottom" id="3Z8-GF-WO8"/>
                 <constraint firstAttribute="centerX" secondItem="l5K-sd-oH2" secondAttribute="centerX" id="3c6-Lm-zDp"/>
+                <constraint firstItem="Gfz-J6-F90" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="5Ha-g5-Oo6"/>
                 <constraint firstItem="l5K-sd-oH2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6lt-By-gtb"/>
                 <constraint firstItem="v8B-Yh-Cmg" firstAttribute="top" secondItem="l5K-sd-oH2" secondAttribute="bottom" constant="10" id="N7h-Dn-3JC"/>
                 <constraint firstAttribute="centerX" secondItem="WRN-x1-NWX" secondAttribute="centerX" id="XBk-z9-1kV"/>
                 <constraint firstAttribute="centerX" secondItem="l5K-sd-oH2" secondAttribute="centerX" id="Y5h-BP-Rgx"/>
                 <constraint firstItem="l5K-sd-oH2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="fab-Ol-aE0"/>
                 <constraint firstAttribute="trailing" secondItem="WRN-x1-NWX" secondAttribute="trailing" constant="10" id="hMv-OE-rfU"/>
+                <constraint firstItem="Gfz-J6-F90" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="kXD-tS-HpJ"/>
                 <constraint firstItem="OgU-Bx-FVX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="os1-nk-exN"/>
                 <constraint firstAttribute="centerX" secondItem="v8B-Yh-Cmg" secondAttribute="centerX" id="qNj-rD-u5m"/>
                 <constraint firstAttribute="centerX" secondItem="OgU-Bx-FVX" secondAttribute="centerX" id="qyy-ym-PQL"/>
@@ -69,7 +101,7 @@
                     <exclude reference="hMv-OE-rfU"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="723" y="553"/>
+            <point key="canvasLocation" x="715.5" y="522"/>
         </view>
     </objects>
 </document>

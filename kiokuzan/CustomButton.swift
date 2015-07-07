@@ -48,8 +48,8 @@ class CustomButton: UIButton {
   }
   
   private func touchStartAnimation(){
-    UIView.animateWithDuration(0.2,
-      delay: 0.0,
+    UIView.animateWithDuration(0.05,
+      delay: 0.1,
       options: UIViewAnimationOptions.CurveEaseIn,
       animations: {() -> Void in
         self.transform = CGAffineTransformMakeScale(0.95, 0.95);
@@ -61,8 +61,8 @@ class CustomButton: UIButton {
   }
   
   private func touchEndAnimation(){
-    UIView.animateWithDuration(0.2,
-      delay: 0.0,
+    UIView.animateWithDuration(0.1,
+      delay: 0.1,
       options: UIViewAnimationOptions.CurveEaseIn,
       animations: {() -> Void in
         self.transform = CGAffineTransformMakeScale(1.0, 1.0);

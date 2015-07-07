@@ -10,11 +10,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Idea-120.png" translatesAutoresizingMaskIntoConstraints="NO" id="50q-NP-MK4">
-                    <rect key="frame" x="128" y="274" width="120" height="120"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Idea-100.png" translatesAutoresizingMaskIntoConstraints="NO" id="50q-NP-MK4">
+                    <rect key="frame" x="138" y="284" width="100" height="100"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="120" id="6U3-PD-IAQ"/>
-                        <constraint firstAttribute="height" constant="120" id="ICw-VU-Yqd"/>
+                        <constraint firstAttribute="width" constant="100" id="6U3-PD-IAQ"/>
+                        <constraint firstAttribute="height" constant="100" id="ICw-VU-Yqd"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -29,6 +29,6 @@
         </view>
     </objects>
     <resources>
-        <image name="Idea-120.png" width="120" height="120"/>
+        <image name="Idea-100.png" width="100" height="100"/>
     </resources>
 </document>

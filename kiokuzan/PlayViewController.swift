@@ -47,8 +47,12 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     self.view.addSubview(questionView)
     updateQuestion()
     
-    // 「次へ」ボタン
+    // 「Next」ボタン
     self.view.addSubview(self.nextButtonBoard)
+    
+    // 「Back」ボタン
+    var backButton = (self.questionView.viewWithTag(5) as! UIButton)
+    backButton.addTarget(self, action: "backButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
     
     // タイマー始動
     timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
@@ -107,6 +111,10 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   func pushedNumber(numberText: String) {
     checkAnswer(numberText)
     updateQuestion()
+  }
+  
+  func backButtonTapped(sender: UIButton){
+    self.performSegueWithIdentifier("fromPlayToTopSegue", sender: self)
   }
   
   func updateTimer() {

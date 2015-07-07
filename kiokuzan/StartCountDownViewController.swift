@@ -18,15 +18,15 @@ class StartCountDownViewController: UIViewController  {
     // カウントダウン数値ラベル設定
     _countNumberLabel = UILabel(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
     _countNumberLabel.font = UIFont(name: "HelveticaNeue", size: 54)
-    _countNumberLabel.textColor = UIColor(red: 24.0 / 255, green: 145.0 / 255, blue: 214.0 / 255, alpha: 1)
+    _countNumberLabel.textColor = UIColor.pastelBlueColor(1.0)
     // 中心揃え
     _countNumberLabel.textAlignment = NSTextAlignment.Center
     _countNumberLabel.baselineAdjustment = UIBaselineAdjustment.AlignCenters
     self.view.addSubview(_countNumberLabel)
     
     _circleView = UIView(frame : CGRectMake((self.view.frame.width/2)-100, (self.view.frame.height/2)-100, 200, 200))
-    _circleView.layer.addSublayer(drawCircle(_circleView.frame.width, strokeColor: UIColor(red: 24.0 / 255, green: 145.0 / 255, blue: 214.0 / 255, alpha:0.2)))
-    _circleView.layer.addSublayer(drawCircle(_circleView.frame.width, strokeColor: UIColor(red: 24.0 / 255, green: 145.0 / 255, blue: 214.0 / 255, alpha:1)))
+    _circleView.layer.addSublayer(drawCircle(_circleView.frame.width, strokeColor: UIColor.pastelBlueColor(0.2)))
+    _circleView.layer.addSublayer(drawCircle(_circleView.frame.width, strokeColor: UIColor.pastelBlueColor(1.0)))
     self.view.addSubview(_circleView)
   }
   

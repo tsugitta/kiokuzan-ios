@@ -140,9 +140,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="jJI-JE-H7m" kind="presentation" identifier="fromPlayToResultSegue" modalTransitionStyle="crossDissolve" id="T1A-dP-Ehl"/>
+                        <segue destination="iug-rP-o7m" kind="unwind" identifier="fromPlayToTopSegue" unwindAction="unwindToTop:" id="UeY-lC-bBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUh-lh-4aB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="iug-rP-o7m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1020.5" y="406.5"/>
         </scene>
@@ -205,7 +207,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="fEy-dl-qKJ" kind="unwind" unwindAction="unwindToTop:" id="Bou-En-CeK"/>
+                                    <segue destination="fEy-dl-qKJ" kind="unwind" identifier="fromResultToTopSegue" unwindAction="unwindToTop:" id="Bou-En-CeK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -253,7 +255,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkY-tZ-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fEy-dl-qKJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1473.5" y="406.5"/>
+            <point key="canvasLocation" x="155.5" y="1224.5"/>
         </scene>
     </scenes>
 </document>

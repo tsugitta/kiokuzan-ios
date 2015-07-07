@@ -52,14 +52,14 @@
                         <constraint firstAttribute="height" constant="40" id="vsc-tZ-RiA"/>
                         <constraint firstAttribute="height" constant="40" id="w2l-2A-sXV"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
                     <state key="normal" title="B a c k">
                         <color key="titleColor" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
+                            <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="7"/>

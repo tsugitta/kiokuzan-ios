@@ -60,10 +60,10 @@ class Question: NSObject {
   }
 
   class func generateQuestionArray(numberOfQuestions num: Int) -> [Question] {
-    var question_array: [Question] = []
+    var questionArray: [Question] = []
     for i in 1...num {
-      question_array.append(Question())
+      questionArray.append(Question())
     }
-    return question_array
+    return questionArray
   }
 }

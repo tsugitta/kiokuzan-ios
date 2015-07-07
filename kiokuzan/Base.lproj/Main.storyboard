@@ -85,6 +85,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Kbv-ds-RJT"/>
                                 <exclude reference="LVf-p3-3aI"/>
                                 <exclude reference="iYf-fg-W4j"/>
                                 <exclude reference="kjP-yG-Gq5"/>

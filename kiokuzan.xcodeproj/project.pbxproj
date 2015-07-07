@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF29C51C1B4BBD7900D01BD1 /* Idea-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */; };
+		DF29C5211B4BBF4D00D01BD1 /* Idea-58.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C51E1B4BBF4D00D01BD1 /* Idea-58.png */; };
+		DF29C5221B4BBF4D00D01BD1 /* Idea-80.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C51F1B4BBF4D00D01BD1 /* Idea-80.png */; };
+		DF29C5231B4BBF4D00D01BD1 /* Idea-120.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C5201B4BBF4D00D01BD1 /* Idea-120.png */; };
+		DF29C5261B4BBFD500D01BD1 /* Idea-87.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C5241B4BBFD500D01BD1 /* Idea-87.png */; };
+		DF29C5271B4BBFD500D01BD1 /* Idea-180.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C5251B4BBFD500D01BD1 /* Idea-180.png */; };
 		DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3DE1B47D9F80018484B /* AppDelegate.swift */; };
 		DF43C3E11B47D9F80018484B /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C3E01B47D9F80018484B /* TopViewController.swift */; };
 		DF43C3E41B47D9F80018484B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF43C3E21B47D9F80018484B /* Main.storyboard */; };
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-100.png"; sourceTree = "<group>"; };
+		DF29C51E1B4BBF4D00D01BD1 /* Idea-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-58.png"; sourceTree = "<group>"; };
+		DF29C51F1B4BBF4D00D01BD1 /* Idea-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-80.png"; sourceTree = "<group>"; };
+		DF29C5201B4BBF4D00D01BD1 /* Idea-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-120.png"; sourceTree = "<group>"; };
+		DF29C5241B4BBFD500D01BD1 /* Idea-87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-87.png"; sourceTree = "<group>"; };
+		DF29C5251B4BBFD500D01BD1 /* Idea-180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-180.png"; sourceTree = "<group>"; };
 		DF43C3D91B47D9F80018484B /* kiokuzan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kiokuzan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF43C3DD1B47D9F80018484B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF43C3DE1B47D9F80018484B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +88,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF29C51D1B4BBEE700D01BD1 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DF29C51E1B4BBF4D00D01BD1 /* Idea-58.png */,
+				DF29C51F1B4BBF4D00D01BD1 /* Idea-80.png */,
+				DF29C5241B4BBFD500D01BD1 /* Idea-87.png */,
+				DF29C5251B4BBFD500D01BD1 /* Idea-180.png */,
+				DF29C5201B4BBF4D00D01BD1 /* Idea-120.png */,
+				DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		DF43C3D01B47D9F70018484B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +126,7 @@
 				DFA4664A1B4B09D90061D3F5 /* Controller */,
 				DFA4664C1B4B0A000061D3F5 /* ViewItems */,
 				DFA466531B4B1DDF0061D3F5 /* Extension */,
+				DF29C51D1B4BBEE700D01BD1 /* images */,
 				DF43C3E21B47D9F80018484B /* Main.storyboard */,
 				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
 				DF43C3E51B47D9F80018484B /* Images.xcassets */,
@@ -254,10 +280,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF29C5261B4BBFD500D01BD1 /* Idea-87.png in Resources */,
 				DFA4665B1B4B2A9C0061D3F5 /* QuestionView.xib in Resources */,
 				DF43C3E41B47D9F80018484B /* Main.storyboard in Resources */,
+				DF29C5231B4BBF4D00D01BD1 /* Idea-120.png in Resources */,
+				DF29C5271B4BBFD500D01BD1 /* Idea-180.png in Resources */,
 				DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */,
+				DF29C5211B4BBF4D00D01BD1 /* Idea-58.png in Resources */,
 				DF43C3E61B47D9F80018484B /* Images.xcassets in Resources */,
+				DF29C5221B4BBF4D00D01BD1 /* Idea-80.png in Resources */,
+				DF29C51C1B4BBD7900D01BD1 /* Idea-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

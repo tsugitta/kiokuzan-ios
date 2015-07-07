@@ -9,10 +9,26 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Idea-120.png" translatesAutoresizingMaskIntoConstraints="NO" id="50q-NP-MK4">
+                    <rect key="frame" x="128" y="274" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="6U3-PD-IAQ"/>
+                        <constraint firstAttribute="height" constant="120" id="ICw-VU-Yqd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="50q-NP-MK4" secondAttribute="centerX" id="woe-CE-Z2d"/>
+                <constraint firstAttribute="centerY" secondItem="50q-NP-MK4" secondAttribute="centerY" id="yeC-8j-A6Q"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-            <point key="canvasLocation" x="548" y="455"/>
+            <point key="canvasLocation" x="547.5" y="454.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Idea-120.png" width="120" height="120"/>
+    </resources>
 </document>

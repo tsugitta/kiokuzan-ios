@@ -11,6 +11,7 @@ import UIKit
 class ResultViewController: UIViewController {
   var timerCountNum: Int!
   var missCount: Int!
+  var backNumber: Int!
   
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var missLabel: UILabel!
@@ -19,19 +20,19 @@ class ResultViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.scoreLabel.text = ConvertTimerCountNumToString(timerCountNum)
+    self.scoreLabel.text = convertTimerCountNumToString(timerCountNum)
     self.missLabel.text = "(miss: \(self.missCount))"
     
     let defaults = NSUserDefaults.standardUserDefaults()
-    var highScoreCountNum: AnyObject! = defaults.objectForKey("highScoreCountNum")
+    var highScoreCountNum: AnyObject! = defaults.objectForKey("\(backNumber)BackHighScoreCountNum")
     if highScoreCountNum == nil || timerCountNum < highScoreCountNum as! Int {
       highScoreCountNum = timerCountNum
-      defaults.setObject(highScoreCountNum, forKey: "highScoreCountNum")
+      defaults.setObject(highScoreCountNum, forKey: "\(backNumber)BackHighScoreCountNum")
     }
-    self.highScoreLabel.text = "High Score: \(ConvertTimerCountNumToString(highScoreCountNum as! Int))"
+    self.highScoreLabel.text = "High Score: \(convertTimerCountNumToString(highScoreCountNum as! Int))"
   }
 
-  func ConvertTimerCountNumToString(countNum: Int) -> String {
+  func convertTimerCountNumToString(countNum: Int) -> String {
     let ms = countNum % 100
     let s = (countNum - ms) / 100 % 60
     let m = (countNum - s - ms) / 6000 % 3600

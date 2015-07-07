@@ -19,8 +19,8 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   var questionView: UIView!
   
   var questionArray: [Question] = []
-  var totalQuestionNumber: Int = 20
-  var backNumber: Int = 3
+  var totalQuestionNumber: Int!
+  var backNumber: Int!
   var currentQuestionNumber: Int = 0
   var currentAnswerNumber: Int = 0
   var missCount: Int = 0
@@ -38,8 +38,19 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     self.inputBoard = InputBoard(screenWidth: self.screenWidth, screenHeight: self.screenHeight, viewHeight: self.inputHeight)
     self.inputBoard.delegate = self
     self.questionView = UINib(nibName: "QuestionView", bundle: nil).instantiateWithOwner(self, options: nil)[0] as! UIView
+    (self.questionView.viewWithTag(3) as! LTMorphingLabel).text = ""
 
     // 問題作成
+    switch self.backNumber {
+      case 3:
+        totalQuestionNumber = 20
+      case 5:
+        totalQuestionNumber = 25
+      case 10:
+        totalQuestionNumber = 30
+      default:
+        break
+    }
     questionArray = Question.generateQuestionArray(numberOfQuestions: self.totalQuestionNumber)
 
     // 問題表示
@@ -75,10 +86,10 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     if self.currentQuestionNumber <= self.totalQuestionNumber {
       var currentQuestion = self.questionArray[self.currentQuestionNumber - 1]
       (self.questionView.viewWithTag(2) as! UILabel).text = "Q\(self.currentQuestionNumber)"
-      (self.questionView.viewWithTag(3) as! UILabel).text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
+      (self.questionView.viewWithTag(3) as! LTMorphingLabel).text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
     } else {
       (self.questionView.viewWithTag(2) as! UILabel).text = ""
-      (self.questionView.viewWithTag(3) as! UILabel).text = "Hang in there!"
+      (self.questionView.viewWithTag(3) as! LTMorphingLabel).text = "Hang in there!"
     }
     if self.currentAnswerNumber > 0 {
       (self.questionView.viewWithTag(4) as! UILabel).text = "Answer Q\(self.currentAnswerNumber)."
@@ -134,6 +145,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
       var resultView :ResultViewController = segue.destinationViewController as! ResultViewController
       resultView.timerCountNum = self.timerCountNum
       resultView.missCount = self.missCount
+      resultView.backNumber = self.backNumber
     }
   }
   

@@ -40,11 +40,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="X3m-nH-sER" kind="presentation" modalTransitionStyle="crossDissolve" animates="NO" id="3Re-sc-Hg7"/>
+                                    <segue destination="X3m-nH-sER" kind="presentation" identifier="fromTopToStartCountDownSegue" modalTransitionStyle="crossDissolve" animates="NO" id="3Re-sc-Hg7"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-BO-r5P">
-                                <rect key="frame" x="36" y="477" width="303" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-BO-r5P">
+                                <rect key="frame" x="36" y="457" width="303" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QU5-8J-Ftz"/>
                                 </constraints>
@@ -52,8 +52,8 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-TG-i2k">
-                                <rect key="frame" x="83" y="292" width="210" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-TG-i2k">
+                                <rect key="frame" x="134" y="291" width="107" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -64,21 +64,50 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-zh-pYp">
+                                <rect key="frame" x="56" y="387" width="263" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wzl-sH-mj0"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="3 back"/>
+                                    <segment title="5 back"/>
+                                    <segment title="10 back"/>
+                                </segments>
+                                <connections>
+                                    <action selector="backNumberChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="2Gh-n7-EFO"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcv-vb-IEm" customClass="LTMorphingLabel" customModule="kiokuzan" customModuleProvider="target">
+                                <rect key="frame" x="184" y="329" width="7" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nIJ-zh-pYp" firstAttribute="top" secondItem="Egb-TG-i2k" secondAttribute="bottom" constant="50" id="4zb-7O-uaC"/>
+                            <constraint firstItem="nIJ-zh-pYp" firstAttribute="top" secondItem="Egb-TG-i2k" secondAttribute="bottom" constant="30" id="79e-ye-RCV"/>
+                            <constraint firstItem="rlC-BO-r5P" firstAttribute="top" secondItem="nIJ-zh-pYp" secondAttribute="bottom" constant="30" id="AE7-89-mtW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="AFi-Ux-3ck"/>
-                            <constraint firstItem="C30-3P-YZh" firstAttribute="top" secondItem="rlC-BO-r5P" secondAttribute="bottom" constant="10" id="ATW-RF-t4Y"/>
+                            <constraint firstItem="C30-3P-YZh" firstAttribute="top" secondItem="rlC-BO-r5P" secondAttribute="bottom" constant="30" id="ATW-RF-t4Y"/>
+                            <constraint firstItem="nIJ-zh-pYp" firstAttribute="top" secondItem="pcv-vb-IEm" secondAttribute="bottom" constant="30" id="GUr-ab-Hkj"/>
                             <constraint firstAttribute="centerX" secondItem="YtW-B5-CUy" secondAttribute="centerX" id="Kbv-ds-RJT"/>
+                            <constraint firstItem="nIJ-zh-pYp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="LSx-cU-C3x"/>
                             <constraint firstAttribute="centerY" secondItem="C30-3P-YZh" secondAttribute="centerY" id="LVf-p3-3aI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="C30-3P-YZh" secondAttribute="bottom" constant="100" id="O8P-a3-hZx"/>
                             <constraint firstItem="rlC-BO-r5P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="OBg-bN-d5Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlC-BO-r5P" secondAttribute="trailing" constant="20" id="RGP-jp-yYu"/>
+                            <constraint firstAttribute="centerX" secondItem="pcv-vb-IEm" secondAttribute="centerX" id="Sbc-MX-Ctq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YtW-B5-CUy" secondAttribute="trailing" constant="10" id="V6S-vI-AF0"/>
                             <constraint firstAttribute="centerX" secondItem="Egb-TG-i2k" secondAttribute="centerX" id="au4-HD-cnQ"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="eqy-Q6-3b4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nIJ-zh-pYp" secondAttribute="trailing" constant="40" id="fWZ-OA-fNv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="iYf-fg-W4j"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="kjP-yG-Gq5"/>
+                            <constraint firstItem="pcv-vb-IEm" firstAttribute="top" secondItem="Egb-TG-i2k" secondAttribute="bottom" constant="10" id="lc0-an-VQw"/>
+                            <constraint firstItem="pcv-vb-IEm" firstAttribute="top" secondItem="Egb-TG-i2k" secondAttribute="bottom" constant="15" id="ljK-VJ-qcH"/>
                             <constraint firstItem="YtW-B5-CUy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="os4-nO-Pct"/>
                             <constraint firstItem="Egb-TG-i2k" firstAttribute="top" secondItem="YtW-B5-CUy" secondAttribute="bottom" constant="100" id="wTM-Yg-lGA"/>
                             <constraint firstItem="YtW-B5-CUy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="xLG-8y-mG6"/>
@@ -86,6 +115,10 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Kbv-ds-RJT"/>
+                                <exclude reference="wTM-Yg-lGA"/>
+                                <exclude reference="ljK-VJ-qcH"/>
+                                <exclude reference="4zb-7O-uaC"/>
+                                <exclude reference="79e-ye-RCV"/>
                                 <exclude reference="LVf-p3-3aI"/>
                                 <exclude reference="iYf-fg-W4j"/>
                                 <exclude reference="kjP-yG-Gq5"/>
@@ -94,7 +127,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="highScoreLabel" destination="Egb-TG-i2k" id="ktM-qo-Hv9"/>
+                        <outlet property="highScoreLabel" destination="Egb-TG-i2k" id="ICE-vB-RaB"/>
+                        <outlet property="highScoreTime" destination="pcv-vb-IEm" id="r3b-2S-ZOt"/>
+                        <outlet property="numberOfQuestions" destination="rlC-BO-r5P" id="Icf-ki-utU"/>
                         <outlet property="titleLabel" destination="YtW-B5-CUy" id="yrR-7H-YX6"/>
                     </connections>
                 </viewController>

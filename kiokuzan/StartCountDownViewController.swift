@@ -15,6 +15,8 @@ class StartCountDownViewController: UIViewController  {
   var circleView: UIView!
   var animated: Bool = false
   
+  var backNumber: Int!
+  
   override func viewDidLoad() {
     self.countNumberLabel = UILabel(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
     self.countNumberLabel.font = UIFont(name: "HelveticaNeue", size: 54)
@@ -73,6 +75,13 @@ class StartCountDownViewController: UIViewController  {
       performSegueWithIdentifier("fromStartCountDownToPlaySegue",sender: nil)
     } else {
       circleAnimation(layer)
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    if segue.identifier == "fromStartCountDownToPlaySegue" {
+      var playView :PlayViewController = segue.destinationViewController as! PlayViewController
+      playView.backNumber = self.backNumber
     }
   }
 }

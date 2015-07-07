@@ -33,30 +33,22 @@ class InputBoard: UIView {
         if (y == 3 && x == 0) {
           continue
         }
-        //計算機のボタン作成
         var button = UIButton()
-        //ボタンの横幅
         var buttonWidth = (screenWidth - (buttonMargin * (Double(xButtonCount)+1)))/Double(xButtonCount)
-        //ボタンの縦幅
         var buttonHeight = (viewHeight - ((buttonMargin*Double(yButtonCount)+1)))/Double(yButtonCount)
-        //ボタンのx座標
         var buttonPositionX = (screenWidth - buttonMargin) / Double(xButtonCount) * Double(x) + buttonMargin
-        //ボタンのy座標
         var buttonPositionY = (viewHeight - buttonMargin) / Double(yButtonCount) * Double(y) + buttonMargin
-        //ボタンの配置、サイズ
         button.frame = CGRect(x:buttonPositionX, y:buttonPositionY, width:buttonWidth, height:buttonHeight)
-        //背景
+        
         button.layer.borderColor = UIColor.pastelBlueColor(0.5).CGColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 5
-        //ボタンのラベルタイトル
+        
         var buttonNumber = y * xButtonCount + x
-        //ボタンのラベルタイトルを取り出すインデックス番号
         button.setTitle(buttonLabels[buttonNumber],forState: UIControlState.Normal)
         button.setTitleColor(UIColor.pastelBlueColor(0.5), forState: UIControlState.Normal)
-        //ボタンタップ時のアクション
         button.addTarget(self, action: "buttonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
-        //ボタン配置
+        
         self.addSubview(button)
       }
     }

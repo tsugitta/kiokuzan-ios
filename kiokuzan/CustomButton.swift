@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable
 class CustomButton: UIButton {
+  var backGroundColorBefore: UIColor!
   
   @IBInspectable var textColor: UIColor?
   
@@ -29,5 +30,45 @@ class CustomButton: UIButton {
     didSet {
       layer.borderColor = borderColor.CGColor
     }
+  }
+  
+  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    super.touchesBegan(touches, withEvent: event)
+    self.touchStartAnimation()
+  }
+  
+  override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    super.touchesCancelled(touches, withEvent: event)
+    self.touchEndAnimation()
+  }
+  
+  override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+    super.touchesEnded(touches, withEvent: event)
+    self.touchEndAnimation()
+  }
+  
+  private func touchStartAnimation(){
+    UIView.animateWithDuration(0.2,
+      delay: 0.0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {() -> Void in
+        self.transform = CGAffineTransformMakeScale(0.95, 0.95);
+        self.backGroundColorBefore = self.backgroundColor
+        self.backgroundColor = UIColor.pastelBlueColor(0.2)
+      },
+      completion: nil
+    )
+  }
+  
+  private func touchEndAnimation(){
+    UIView.animateWithDuration(0.2,
+      delay: 0.0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {() -> Void in
+        self.transform = CGAffineTransformMakeScale(1.0, 1.0);
+        self.backgroundColor = self.backGroundColorBefore
+      },
+      completion: nil
+    )
   }
 }

@@ -18,27 +18,22 @@ class NextButtonBoard: UIView {
   init(screenWidth: Double, screenHeight: Double, viewHeight: Double) {
     super.init(frame: CGRect(x: 0, y: screenHeight - viewHeight, width: screenWidth, height: viewHeight))
     
-    var button = UIButton()
-    // ボタンの横幅
+    var button = CustomButton()
     var buttonWidth = screenWidth / 2
-    // ボタンの縦幅
-    var buttonHeight = viewHeight / 3
-    // ボタンのx座標
+    var buttonHeight = viewHeight / 4
     var buttonPositionX = (screenWidth - buttonWidth) / 2
-    // ボタンのy座標
-    var buttonPositionY = (viewHeight - buttonHeight) / 2
-    // ボタンの配置、サイズ
+    var buttonPositionY = (viewHeight - buttonHeight) * 2 / 3
     button.frame = CGRect(x:buttonPositionX, y:buttonPositionY, width:buttonWidth, height:buttonHeight)
-    // border
+    
     button.layer.borderColor = UIColor.pastelBlueColor(0.5).CGColor
     button.layer.borderWidth = 2
     button.layer.cornerRadius = 5
-    // title
+    
     button.setTitle("Next", forState: UIControlState.Normal)
     button.setTitleColor(UIColor.pastelBlueColor(0.5), forState: UIControlState.Normal)
-    // ボタンタップ時のアクション
+
     button.addTarget(self, action: "buttonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
-    // ボタン配置
+    
     self.addSubview(button)
   }
   

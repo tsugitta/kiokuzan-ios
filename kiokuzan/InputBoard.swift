@@ -33,7 +33,7 @@ class InputBoard: UIView {
         if (y == 3 && x == 0) {
           continue
         }
-        var button = UIButton()
+        var button = CustomButton()
         var buttonWidth = (screenWidth - (buttonMargin * (Double(xButtonCount)+1)))/Double(xButtonCount)
         var buttonHeight = (viewHeight - ((buttonMargin*Double(yButtonCount)+1)))/Double(yButtonCount)
         var buttonPositionX = (screenWidth - buttonMargin) / Double(xButtonCount) * Double(x) + buttonMargin
@@ -47,6 +47,7 @@ class InputBoard: UIView {
         var buttonNumber = y * xButtonCount + x
         button.setTitle(buttonLabels[buttonNumber],forState: UIControlState.Normal)
         button.setTitleColor(UIColor.pastelBlueColor(0.5), forState: UIControlState.Normal)
+        
         button.addTarget(self, action: "buttonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
         
         self.addSubview(button)

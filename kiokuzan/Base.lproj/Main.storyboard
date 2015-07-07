@@ -43,17 +43,6 @@
                                     <segue destination="X3m-nH-sER" kind="presentation" modalTransitionStyle="crossDissolve" animates="NO" id="3Re-sc-Hg7"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="k i o k u z a n " textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFD-L3-a6K">
-                                <rect key="frame" x="21" y="140" width="333" height="70"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="mDl-it-Z1r"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="55"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-BO-r5P">
                                 <rect key="frame" x="36" y="477" width="303" height="40"/>
                                 <constraints>
@@ -64,39 +53,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-TG-i2k">
-                                <rect key="frame" x="83" y="310" width="210" height="28"/>
+                                <rect key="frame" x="83" y="292" width="210" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="kiokuzan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-B5-CUy">
+                                <rect key="frame" x="26" y="120" width="323" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dFD-L3-a6K" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="120" id="1ub-bY-GgT"/>
-                            <constraint firstItem="Egb-TG-i2k" firstAttribute="top" secondItem="dFD-L3-a6K" secondAttribute="bottom" constant="100" id="AEv-hV-GfZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="AFi-Ux-3ck"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="top" secondItem="rlC-BO-r5P" secondAttribute="bottom" constant="10" id="ATW-RF-t4Y"/>
-                            <constraint firstItem="rlC-BO-r5P" firstAttribute="top" secondItem="dFD-L3-a6K" secondAttribute="bottom" constant="40" id="IEe-mW-zNr"/>
+                            <constraint firstAttribute="centerX" secondItem="YtW-B5-CUy" secondAttribute="centerX" id="Kbv-ds-RJT"/>
                             <constraint firstAttribute="centerY" secondItem="C30-3P-YZh" secondAttribute="centerY" id="LVf-p3-3aI"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="C30-3P-YZh" secondAttribute="bottom" constant="100" id="O8P-a3-hZx"/>
                             <constraint firstItem="rlC-BO-r5P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="OBg-bN-d5Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dFD-L3-a6K" secondAttribute="trailing" constant="5" id="PBT-3c-Ygu"/>
-                            <constraint firstItem="rlC-BO-r5P" firstAttribute="top" secondItem="dFD-L3-a6K" secondAttribute="bottom" constant="20" id="PaF-6o-ZFO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlC-BO-r5P" secondAttribute="trailing" constant="20" id="RGP-jp-yYu"/>
-                            <constraint firstItem="dFD-L3-a6K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="Yrc-Le-W7e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YtW-B5-CUy" secondAttribute="trailing" constant="10" id="V6S-vI-AF0"/>
                             <constraint firstAttribute="centerX" secondItem="Egb-TG-i2k" secondAttribute="centerX" id="au4-HD-cnQ"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="eqy-Q6-3b4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="iYf-fg-W4j"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="kjP-yG-Gq5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dFD-L3-a6K" secondAttribute="trailing" constant="20" id="wBB-PG-lPT"/>
-                            <constraint firstItem="dFD-L3-a6K" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="zp5-lt-tTk"/>
+                            <constraint firstItem="YtW-B5-CUy" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="os4-nO-Pct"/>
+                            <constraint firstItem="Egb-TG-i2k" firstAttribute="top" secondItem="YtW-B5-CUy" secondAttribute="bottom" constant="100" id="wTM-Yg-lGA"/>
+                            <constraint firstItem="YtW-B5-CUy" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="100" id="xLG-8y-mG6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="wBB-PG-lPT"/>
-                                <exclude reference="zp5-lt-tTk"/>
-                                <exclude reference="IEe-mW-zNr"/>
-                                <exclude reference="PaF-6o-ZFO"/>
                                 <exclude reference="LVf-p3-3aI"/>
                                 <exclude reference="iYf-fg-W4j"/>
                                 <exclude reference="kjP-yG-Gq5"/>
@@ -106,6 +94,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="highScoreLabel" destination="Egb-TG-i2k" id="ktM-qo-Hv9"/>
+                        <outlet property="titleLabel" destination="YtW-B5-CUy" id="yrR-7H-YX6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

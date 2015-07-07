@@ -10,9 +10,17 @@ import UIKit
 
 class TopViewController: UIViewController {
   @IBOutlet weak var highScoreLabel: UILabel!
+  @IBOutlet weak var titleLabel: UILabel!
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
+
+    // 文字間隔調整
+    let attributedText = NSMutableAttributedString(string: "kiokuzan")
+    let customLetterSpacing = 4.5
+    attributedText.addAttribute(NSKernAttributeName, value: customLetterSpacing, range: NSMakeRange(0, attributedText.length))
+    titleLabel.attributedText = attributedText
   }
 
   override func viewWillAppear(animated: Bool) {

@@ -9,7 +9,6 @@
 import UIKit
 
 class StartCountDownViewController: UIViewController  {
-  
   var _countNumberLabel:UILabel!
   let _countDownMax:Int = 3
   var _countDownNum:Int = 3

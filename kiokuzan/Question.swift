@@ -17,7 +17,6 @@ class Question: NSObject {
   override init() {
     // 式の答えを決める
     self.answer = Int(arc4random()) % 10
-    
     // 演算子を決める
     let operatorArray = ["+","-","×","÷"]
     self.operatorSymbol = operatorArray[Int(arc4random()) % 4]

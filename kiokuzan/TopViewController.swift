@@ -12,7 +12,6 @@ class TopViewController: UIViewController {
   @IBOutlet weak var highScoreLabel: UILabel!
   @IBOutlet weak var titleLabel: UILabel!
 
-  
   override func viewDidLoad() {
     super.viewDidLoad()
 

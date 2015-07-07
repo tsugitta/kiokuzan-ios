@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckR-ha-SBD" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
-                                <rect key="frame" x="56" y="527" width="263" height="40"/>
+                                <rect key="frame" x="56" y="547" width="263" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="t6U-d3-OGe"/>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mB-mL-XWI">
-                                <rect key="frame" x="57" y="226" width="253" height="64"/>
+                                <rect key="frame" x="56" y="223" width="263" height="36"/>
                                 <string key="text">Several easy questions appear
 one by one.</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
@@ -58,19 +58,19 @@ one by one.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The score is added 10 sec a mistake." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-On-XeY">
-                                <rect key="frame" x="56" y="440" width="286" height="21"/>
+                                <rect key="frame" x="56" y="373" width="263" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is the time to answer all." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-LD-cF1">
-                                <rect key="frame" x="56" y="396" width="272" height="21"/>
+                                <rect key="frame" x="56" y="335" width="263" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-OP-bUD">
-                                <rect key="frame" x="57" y="312" width="561" height="64"/>
+                                <rect key="frame" x="56" y="279" width="263" height="36"/>
                                 <string key="text">Tap the answer which appeard
 3 (or 5, 10) times ago.</string>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
@@ -93,7 +93,7 @@ one by one.</string>
                             <constraint firstItem="ckR-ha-SBD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="c85-2T-J06"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5mB-mL-XWI" secondAttribute="trailing" constant="40" id="cjL-wN-2Ui"/>
                             <constraint firstItem="3Tq-OP-bUD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="gge-4L-PoD"/>
-                            <constraint firstItem="eB0-Vt-5gz" firstAttribute="top" secondItem="ckR-ha-SBD" secondAttribute="bottom" constant="100" id="iBA-SA-RzD"/>
+                            <constraint firstItem="eB0-Vt-5gz" firstAttribute="top" secondItem="ckR-ha-SBD" secondAttribute="bottom" constant="80" id="iBA-SA-RzD"/>
                             <constraint firstItem="t5h-Ek-XSv" firstAttribute="top" secondItem="l2L-AW-0c4" secondAttribute="bottom" constant="100" id="lPb-fN-5s1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OjT-LD-cF1" secondAttribute="trailing" constant="40" id="pyY-Jg-adj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rpM-On-XeY" secondAttribute="trailing" constant="40" id="sna-ce-eeb"/>
@@ -129,7 +129,7 @@ one by one.</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C30-3P-YZh" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
-                                <rect key="frame" x="56" y="527" width="263" height="40"/>
+                                <rect key="frame" x="56" y="547" width="263" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zdb-Q7-gzz"/>
@@ -155,7 +155,7 @@ one by one.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 questions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlC-BO-r5P">
-                                <rect key="frame" x="36" y="457" width="303" height="40"/>
+                                <rect key="frame" x="36" y="477" width="303" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QU5-8J-Ftz"/>
                                 </constraints>
@@ -170,7 +170,7 @@ one by one.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="nIJ-zh-pYp">
-                                <rect key="frame" x="56" y="387" width="263" height="41"/>
+                                <rect key="frame" x="56" y="407" width="263" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Wzl-sH-mj0"/>
                                 </constraints>
@@ -184,7 +184,7 @@ one by one.</string>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score 00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Egb-TG-i2k">
-                                <rect key="frame" x="86" y="329" width="203" height="28"/>
+                                <rect key="frame" x="86" y="349" width="203" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -227,7 +227,7 @@ one by one.</string>
                             <constraint firstItem="nIJ-zh-pYp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="LSx-cU-C3x"/>
                             <constraint firstAttribute="centerY" secondItem="C30-3P-YZh" secondAttribute="centerY" id="LVf-p3-3aI"/>
                             <constraint firstItem="Btj-TA-fdQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MaF-vP-Xs7"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="C30-3P-YZh" secondAttribute="bottom" constant="100" id="O8P-a3-hZx"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="C30-3P-YZh" secondAttribute="bottom" constant="80" id="O8P-a3-hZx"/>
                             <constraint firstItem="rlC-BO-r5P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="OBg-bN-d5Y"/>
                             <constraint firstItem="nIJ-zh-pYp" firstAttribute="top" secondItem="Egb-TG-i2k" secondAttribute="bottom" constant="30" id="RF2-Nz-cn3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlC-BO-r5P" secondAttribute="trailing" constant="20" id="RGP-jp-yYu"/>

@@ -19,8 +19,12 @@ extension Int {
           divisora_factors.append(i)
         }
       }
-      return divisora_factors[Int(arc4random()) % divisora_factors.count]
+      return divisora_factors[Int.getRandomInt(divisora_factors.count)]
     }
+  }
+  
+  static func getRandomInt(n: Int) -> Int {
+    return Int(arc4random_uniform(UInt32(n)))
   }
 }
 

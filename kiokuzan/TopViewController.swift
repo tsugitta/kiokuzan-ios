@@ -24,6 +24,7 @@ class TopViewController: UIViewController {
       highScoreLabel.text = ""
     }
   }
+  
   func ConvertTimerCountNumToString(countNum: Int) -> String {
     let ms = countNum % 100
     let s = (countNum - ms) / 100 % 60
@@ -36,7 +37,6 @@ class TopViewController: UIViewController {
   }
   
   @IBAction func unwindToTop(segue: UIStoryboardSegue) {
-    
   }
 }
 

@@ -11,6 +11,7 @@ import UIKit
 protocol InputBoardDelegate {
   func pushedNumber(numberText: String)
 }
+
 class InputBoard: UIView {
   let xButtonCount = 3 // 一行に配置するボタンの数
   let yButtonCount = 4 // 一列
@@ -65,7 +66,6 @@ class InputBoard: UIView {
       fatalError("init(coder:) has not been implemented")
   }
 
-  //ボタンタップメソッド
   func buttonTapped(sender:UIButton){
     var tappedButtonTitle:String = sender.titleLabel!.text!
     self.delegate?.pushedNumber(tappedButtonTitle)

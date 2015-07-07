@@ -18,17 +18,16 @@ class ResultViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+
     self.scoreLabel.text = ConvertTimerCountNumToString(timerCountNum)
     self.missLabel.text = "(miss: \(self.missCount))"
     
     let defaults = NSUserDefaults.standardUserDefaults()
     var highScoreCountNum: AnyObject! = defaults.objectForKey("highScoreCountNum")
-    if (highScoreCountNum == nil || timerCountNum < highScoreCountNum as! Int) {
+    if highScoreCountNum == nil || timerCountNum < highScoreCountNum as! Int {
       highScoreCountNum = timerCountNum
       defaults.setObject(highScoreCountNum, forKey: "highScoreCountNum")
     }
-    
     self.highScoreLabel.text = "High Score: \(ConvertTimerCountNumToString(highScoreCountNum as! Int))"
   }
 
@@ -38,12 +37,8 @@ class ResultViewController: UIViewController {
     let m = (countNum - s - ms) / 6000 % 3600
     return String(format: "%02d:%02d:%02d", m, s, ms)
   }
-  
-  @IBAction func backButton(sender: UIButton) {
-  }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-  
 }

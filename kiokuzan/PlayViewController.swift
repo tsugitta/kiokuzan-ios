@@ -56,8 +56,8 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
 
   func updateQuestion() {
     currentQuestionNumber++
-    if (currentQuestionNumber > backNumber) {
-      if (currentAnswerNumber + 1 > totalQuestionNumber) {
+    if currentQuestionNumber > backNumber {
+      if currentAnswerNumber + 1 > totalQuestionNumber {
         timer.invalidate()
         performSegueWithIdentifier("fromPlayToResultSegue",sender: nil)
       } else {
@@ -68,7 +68,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   }
   
   func updateQuestionView() {
-    if (self.currentQuestionNumber <= self.totalQuestionNumber) {
+    if self.currentQuestionNumber <= self.totalQuestionNumber {
       var currentQuestion = self.questionArray[self.currentQuestionNumber - 1]
       (self.questionView.viewWithTag(2) as! UILabel).text = "Q\(self.currentQuestionNumber)"
       (self.questionView.viewWithTag(3) as! UILabel).text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
@@ -76,7 +76,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
       (self.questionView.viewWithTag(2) as! UILabel).text = ""
       (self.questionView.viewWithTag(3) as! UILabel).text = "Hang in there!"
     }
-    if (self.currentAnswerNumber > 0) {
+    if self.currentAnswerNumber > 0 {
       (self.questionView.viewWithTag(4) as! UILabel).text = "Answer Q\(self.currentAnswerNumber)."
     } else {
       (self.questionView.viewWithTag(4) as! UILabel).text = ""
@@ -84,7 +84,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   }
   
   func checkAnswer(numberText: String) {
-    if (numberText == "Path") {
+    if numberText == "Path" {
       self.missCount++
       self.timerCountNum += self.missPenaltySecond * 100
     } else {
@@ -98,7 +98,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   
   func pushedNext() {
     updateQuestion()
-    if (currentQuestionNumber > backNumber) {
+    if currentQuestionNumber > backNumber {
       self.nextButtonBoard.removeFromSuperview()
       self.view.addSubview(self.inputBoard)
     }
@@ -122,7 +122,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-    if (segue.identifier == "fromPlayToResultSegue") {
+    if segue.identifier == "fromPlayToResultSegue" {
       // SecondViewControllerクラスをインスタンス化してsegue（画面遷移）で値を渡せるようにバンドルする
       var resultView :ResultViewController = segue.destinationViewController as! ResultViewController
       // secondView（バンドルされた変数）に受け取り用の変数を引数とし_paramを渡す（_paramには渡したい値）

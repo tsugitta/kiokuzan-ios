@@ -32,7 +32,7 @@ class StartCountDownViewController: UIViewController  {
   }
   
   // 遷移毎に実行
-  override func viewWillAppear(animated: Bool) {
+  override func viewDidAppear(animated: Bool) {
     // 数値をリセット
     _countDownNum = _countDownMax
     _countNumberLabel.text = String(_countDownNum)
@@ -94,5 +94,4 @@ class StartCountDownViewController: UIViewController  {
       circleAnimation(layer)
     }
   }
-  
 }

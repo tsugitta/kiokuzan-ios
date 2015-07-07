@@ -59,7 +59,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="QU5-8J-Ftz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -215,7 +215,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="backButton:" destination="jJI-JE-H7m" eventType="touchUpInside" id="ggC-Tr-Ut5"/>
                                     <segue destination="fEy-dl-qKJ" kind="unwind" unwindAction="unwindToTop:" id="Bou-En-CeK"/>
                                 </connections>
                             </button>

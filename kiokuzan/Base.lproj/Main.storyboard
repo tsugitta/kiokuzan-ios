@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DescriptionViewController-->
         <scene sceneID="MiD-u1-TS6">
             <objects>
-                <viewController id="Ige-LA-BL4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DescriptionViewController" title="DescriptionViewController" id="Ige-LA-BL4" customClass="DescriptionViewController" customModule="kiokuzan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l2L-AW-0c4"/>
                         <viewControllerLayoutGuide type="bottom" id="eB0-Vt-5gz"/>
@@ -16,13 +16,105 @@
                     <view key="view" contentMode="scaleToFill" id="IKa-hF-be5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckR-ha-SBD" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
+                                <rect key="frame" x="56" y="527" width="263" height="40"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="t6U-d3-OGe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                <state key="normal" title="O K">
+                                    <color key="titleColor" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="gZ8-wq-7SP" kind="unwind" unwindAction="unwindToTop:" id="3iQ-gi-UBT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how to play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5h-Ek-XSv">
+                                <rect key="frame" x="87" y="120" width="202" height="53"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="44"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mB-mL-XWI">
+                                <rect key="frame" x="57" y="226" width="253" height="64"/>
+                                <string key="text">Several easy questions appear
+one by one.</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The score is added 10 sec a mistake." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-On-XeY">
+                                <rect key="frame" x="56" y="440" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is the time to answer all." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-LD-cF1">
+                                <rect key="frame" x="56" y="396" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-OP-bUD">
+                                <rect key="frame" x="57" y="312" width="561" height="64"/>
+                                <string key="text">Tap the answer which appeard
+3 (or 5, 10) times ago.</string>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rpM-On-XeY" firstAttribute="top" secondItem="OjT-LD-cF1" secondAttribute="bottom" constant="20" id="CcV-2D-8Zn"/>
+                            <constraint firstItem="5mB-mL-XWI" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="CfY-PH-Kib"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ckR-ha-SBD" secondAttribute="trailing" constant="40" id="Hiy-oh-mfe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Tq-OP-bUD" secondAttribute="trailing" constant="40" id="J2M-fU-dmO"/>
+                            <constraint firstItem="OjT-LD-cF1" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="JPO-Pl-w1a"/>
+                            <constraint firstItem="3Tq-OP-bUD" firstAttribute="top" secondItem="5mB-mL-XWI" secondAttribute="bottom" constant="20" id="OC6-ed-4US"/>
+                            <constraint firstItem="t5h-Ek-XSv" firstAttribute="bottom" secondItem="3Tq-OP-bUD" secondAttribute="top" constant="-20" id="UgL-y5-ab0"/>
+                            <constraint firstItem="3Tq-OP-bUD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="VgA-nU-7wB"/>
+                            <constraint firstItem="rpM-On-XeY" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="W5O-7i-6HS"/>
+                            <constraint firstItem="OjT-LD-cF1" firstAttribute="top" secondItem="3Tq-OP-bUD" secondAttribute="bottom" constant="20" id="bpf-Bt-Tfo"/>
+                            <constraint firstItem="ckR-ha-SBD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="c85-2T-J06"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5mB-mL-XWI" secondAttribute="trailing" constant="40" id="cjL-wN-2Ui"/>
+                            <constraint firstItem="3Tq-OP-bUD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="gge-4L-PoD"/>
+                            <constraint firstItem="eB0-Vt-5gz" firstAttribute="top" secondItem="ckR-ha-SBD" secondAttribute="bottom" constant="100" id="iBA-SA-RzD"/>
+                            <constraint firstItem="t5h-Ek-XSv" firstAttribute="top" secondItem="l2L-AW-0c4" secondAttribute="bottom" constant="100" id="lPb-fN-5s1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OjT-LD-cF1" secondAttribute="trailing" constant="40" id="pyY-Jg-adj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rpM-On-XeY" secondAttribute="trailing" constant="40" id="sna-ce-eeb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Tq-OP-bUD" secondAttribute="trailing" constant="40" id="t8e-Pz-fZ9"/>
+                            <constraint firstAttribute="centerX" secondItem="t5h-Ek-XSv" secondAttribute="centerX" id="wwf-ZI-Sej"/>
+                            <constraint firstItem="5mB-mL-XWI" firstAttribute="top" secondItem="t5h-Ek-XSv" secondAttribute="bottom" constant="50" id="y9g-hQ-wZE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UgL-y5-ab0"/>
+                                <exclude reference="VgA-nU-7wB"/>
+                                <exclude reference="t8e-Pz-fZ9"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1rq-Nt-vdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="gZ8-wq-7SP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="155.5" y="-383.5"/>
+            <point key="canvasLocation" x="587.5" y="-337.5"/>
         </scene>
         <!--TopViewController-->
         <scene sceneID="ufC-wZ-h7g">
@@ -97,6 +189,31 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Btj-TA-fdQ" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
+                                <rect key="frame" x="16" y="617" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Im3-1d-53W"/>
+                                    <constraint firstAttribute="width" constant="40" id="qgn-yl-sQc"/>
+                                </constraints>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Ige-LA-BL4" kind="presentation" id="zI7-za-KlE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,9 +222,11 @@
                             <constraint firstItem="rlC-BO-r5P" firstAttribute="top" secondItem="nIJ-zh-pYp" secondAttribute="bottom" constant="30" id="AE7-89-mtW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="C30-3P-YZh" secondAttribute="trailing" constant="40" id="AFi-Ux-3ck"/>
                             <constraint firstItem="C30-3P-YZh" firstAttribute="top" secondItem="rlC-BO-r5P" secondAttribute="bottom" constant="30" id="ATW-RF-t4Y"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Btj-TA-fdQ" secondAttribute="bottom" constant="10" id="JZf-ps-tzO"/>
                             <constraint firstAttribute="centerX" secondItem="YtW-B5-CUy" secondAttribute="centerX" id="Kbv-ds-RJT"/>
                             <constraint firstItem="nIJ-zh-pYp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="LSx-cU-C3x"/>
                             <constraint firstAttribute="centerY" secondItem="C30-3P-YZh" secondAttribute="centerY" id="LVf-p3-3aI"/>
+                            <constraint firstItem="Btj-TA-fdQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="MaF-vP-Xs7"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="C30-3P-YZh" secondAttribute="bottom" constant="100" id="O8P-a3-hZx"/>
                             <constraint firstItem="rlC-BO-r5P" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="OBg-bN-d5Y"/>
                             <constraint firstItem="nIJ-zh-pYp" firstAttribute="top" secondItem="Egb-TG-i2k" secondAttribute="bottom" constant="30" id="RF2-Nz-cn3"/>
@@ -143,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="155.5" y="406.5"/>
+            <point key="canvasLocation" x="116.5" y="406.5"/>
         </scene>
         <!--StartCountDownViewController-->
         <scene sceneID="Fsn-03-zXo">
@@ -311,7 +430,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkY-tZ-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="fEy-dl-qKJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="155.5" y="1224.5"/>
+            <point key="canvasLocation" x="116.5" y="1225.5"/>
         </scene>
     </scenes>
 </document>

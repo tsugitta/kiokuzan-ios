@@ -24,6 +24,7 @@
 		DF28580E1B4C5EBD00872A15 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2857FD1B4C5EBD00872A15 /* Fragment.png */; };
 		DF28580F1B4C5EBD00872A15 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2857FE1B4C5EBD00872A15 /* Smoke.png */; };
 		DF2858101B4C5EBD00872A15 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = DF2857FF1B4C5EBD00872A15 /* Sparkle.png */; };
+		DF2858121B4C7A7900872A15 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2858111B4C7A7900872A15 /* DescriptionViewController.swift */; };
 		DF29C51C1B4BBD7900D01BD1 /* Idea-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */; };
 		DF29C5211B4BBF4D00D01BD1 /* Idea-58.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C51E1B4BBF4D00D01BD1 /* Idea-58.png */; };
 		DF29C5221B4BBF4D00D01BD1 /* Idea-80.png in Resources */ = {isa = PBXBuildFile; fileRef = DF29C51F1B4BBF4D00D01BD1 /* Idea-80.png */; };
@@ -77,6 +78,7 @@
 		DF2857FD1B4C5EBD00872A15 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
 		DF2857FE1B4C5EBD00872A15 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
 		DF2857FF1B4C5EBD00872A15 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
+		DF2858111B4C7A7900872A15 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-100.png"; sourceTree = "<group>"; };
 		DF29C51E1B4BBF4D00D01BD1 /* Idea-58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-58.png"; sourceTree = "<group>"; };
 		DF29C51F1B4BBF4D00D01BD1 /* Idea-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-80.png"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */,
 				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
 				DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */,
+				DF2858111B4C7A7900872A15 /* DescriptionViewController.swift */,
 				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
 			);
 			name = Controller;
@@ -402,6 +405,7 @@
 				DF2858061B4C5EBD00872A15 /* LTMorphingLabel+Burn.swift in Sources */,
 				DFA466521B4B1D080061D3F5 /* ExtensionUIColor.swift in Sources */,
 				DF28580B1B4C5EBD00872A15 /* LTMorphingLabel.swift in Sources */,
+				DF2858121B4C7A7900872A15 /* DescriptionViewController.swift in Sources */,
 				DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */,
 				DFA4665D1B4B41690061D3F5 /* ResultViewController.swift in Sources */,
 			);

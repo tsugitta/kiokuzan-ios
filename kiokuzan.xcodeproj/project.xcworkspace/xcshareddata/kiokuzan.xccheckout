@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>2ED85094-C469-440D-B67E-CA2F48E53B66</string>
 	<key>IDESourceControlProjectName</key>
-	<string>kiokuzan</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>7F21621FEAD6ABF99871DED051F63C1CF4D78EA6</key>
 		<string>github.com:we-b/kiokuzan.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>kiokuzan.xcodeproj</string>
+	<string>kiokuzan.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7F21621FEAD6ABF99871DED051F63C1CF4D78EA6</key>

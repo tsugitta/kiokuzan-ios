@@ -18,6 +18,11 @@
 		DF43C4031B47F3520018484B /* InputBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4021B47F3520018484B /* InputBoard.swift */; };
 		DF43C4051B48E3A30018484B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4041B48E3A30018484B /* Question.swift */; };
 		DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */; };
+		DFA4664E1B4B190D0061D3F5 /* NextButtonBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */; };
+		DFA466521B4B1D080061D3F5 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */; };
+		DFA466551B4B1DFD0061D3F5 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466541B4B1DFD0061D3F5 /* ExtensionInt.swift */; };
+		DFA4665B1B4B2A9C0061D3F5 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA4665A1B4B2A9C0061D3F5 /* QuestionView.xib */; };
+		DFA4665D1B4B41690061D3F5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,11 @@
 		DF43C4021B47F3520018484B /* InputBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBoard.swift; sourceTree = "<group>"; };
 		DF43C4041B48E3A30018484B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountDownViewController.swift; sourceTree = "<group>"; };
+		DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButtonBoard.swift; sourceTree = "<group>"; };
+		DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionUIColor.swift; path = ../ExtensionUIColor.swift; sourceTree = "<group>"; };
+		DFA466541B4B1DFD0061D3F5 /* ExtensionInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
+		DFA4665A1B4B2A9C0061D3F5 /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionView.xib; path = ../QuestionView.xib; sourceTree = "<group>"; };
+		DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = ../ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +100,7 @@
 				DFA4664B1B4B09F40061D3F5 /* Model */,
 				DFA4664A1B4B09D90061D3F5 /* Controller */,
 				DFA4664C1B4B0A000061D3F5 /* ViewItems */,
+				DFA466531B4B1DDF0061D3F5 /* Extension */,
 				DF43C3E21B47D9F80018484B /* Main.storyboard */,
 				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
 				DF43C3E51B47D9F80018484B /* Images.xcassets */,
@@ -127,6 +138,7 @@
 		DFA4664A1B4B09D90061D3F5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */,
 				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
 				DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */,
 				DF43C3FE1B47DADD0018484B /* PlayViewController.swift */,
@@ -146,9 +158,20 @@
 			isa = PBXGroup;
 			children = (
 				DF43C4021B47F3520018484B /* InputBoard.swift */,
+				DFA4665A1B4B2A9C0061D3F5 /* QuestionView.xib */,
+				DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */,
 				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
 			);
 			name = ViewItems;
+			sourceTree = "<group>";
+		};
+		DFA466531B4B1DDF0061D3F5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DFA466541B4B1DFD0061D3F5 /* ExtensionInt.swift */,
+				DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA4665B1B4B2A9C0061D3F5 /* QuestionView.xib in Resources */,
 				DF43C3E41B47D9F80018484B /* Main.storyboard in Resources */,
 				DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */,
 				DF43C3E61B47D9F80018484B /* Images.xcassets in Resources */,
@@ -254,10 +278,14 @@
 				DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */,
 				DF43C3E11B47D9F80018484B /* TopViewController.swift in Sources */,
 				DF43C3FF1B47DADD0018484B /* PlayViewController.swift in Sources */,
+				DFA466551B4B1DFD0061D3F5 /* ExtensionInt.swift in Sources */,
+				DFA4664E1B4B190D0061D3F5 /* NextButtonBoard.swift in Sources */,
 				DF43C4051B48E3A30018484B /* Question.swift in Sources */,
 				DF43C4031B47F3520018484B /* InputBoard.swift in Sources */,
 				DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */,
+				DFA466521B4B1D080061D3F5 /* ExtensionUIColor.swift in Sources */,
 				DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */,
+				DFA4665D1B4B41690061D3F5 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

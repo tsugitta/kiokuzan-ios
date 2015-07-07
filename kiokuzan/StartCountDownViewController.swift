@@ -89,7 +89,7 @@ class StartCountDownViewController: UIViewController  {
     
     if _countDownNum <= 0 {
       //次の画面へ遷移
-      performSegueWithIdentifier("segue",sender: nil)
+      performSegueWithIdentifier("fromStartCountDownToPlaySegue",sender: nil)
     } else {
       circleAnimation(layer)
     }

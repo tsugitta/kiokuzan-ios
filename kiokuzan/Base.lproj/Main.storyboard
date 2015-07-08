@@ -327,13 +327,13 @@ one by one.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score 00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALQ-3P-iJK">
-                                <rect key="frame" x="86" y="509" width="203" height="28"/>
+                                <rect key="frame" x="86" y="479" width="203" height="28"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVX-4H-pu8" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
-                                <rect key="frame" x="56" y="577" width="263" height="40"/>
+                                <rect key="frame" x="56" y="547" width="263" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fhX-d4-gIi"/>
@@ -359,28 +359,28 @@ one by one.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="516-Tq-LhM">
-                                <rect key="frame" x="103" y="60" width="169" height="90"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="75"/>
+                                <rect key="frame" x="120" y="60" width="135" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiB-rM-EHz" customClass="CustomView" customModule="kiokuzan" customModuleProvider="target">
-                                <rect key="frame" x="56" y="200" width="263" height="289"/>
+                                <rect key="frame" x="56" y="182" width="263" height="277"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlj-zX-AAW">
-                                        <rect key="frame" x="48" y="119" width="168" height="52"/>
+                                        <rect key="frame" x="48" y="113" width="168" height="52"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="43"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(miss: 0)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-Ql-z12">
-                                        <rect key="frame" x="168" y="171" width="85" height="30"/>
+                                        <rect key="frame" x="168" y="165" width="85" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-FS-iwA">
-                                        <rect key="frame" x="162" y="239" width="40" height="40"/>
+                                        <rect key="frame" x="162" y="227" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NCD-D6-W8y"/>
                                             <constraint firstAttribute="width" constant="40" id="PaK-Nb-qtX"/>
@@ -393,7 +393,7 @@ one by one.</string>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-Nu-EFa">
-                                        <rect key="frame" x="213" y="239" width="40" height="40"/>
+                                        <rect key="frame" x="213" y="227" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="HJq-d0-cVA"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="h14-Ig-0gj"/>
@@ -465,7 +465,7 @@ one by one.</string>
                             <constraint firstItem="516-Tq-LhM" firstAttribute="top" secondItem="nGC-Q5-RU4" secondAttribute="bottom" constant="40" id="5ti-jz-12a"/>
                             <constraint firstItem="RVX-4H-pu8" firstAttribute="top" secondItem="ALQ-3P-iJK" secondAttribute="bottom" constant="30" id="8lt-Mb-I9z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PiB-rM-EHz" secondAttribute="trailing" constant="40" id="HE7-Xt-QEu"/>
-                            <constraint firstItem="prG-Wp-dsm" firstAttribute="top" secondItem="RVX-4H-pu8" secondAttribute="bottom" constant="50" id="HyH-Yj-ivZ"/>
+                            <constraint firstItem="prG-Wp-dsm" firstAttribute="top" secondItem="RVX-4H-pu8" secondAttribute="bottom" constant="80" id="HyH-Yj-ivZ"/>
                             <constraint firstItem="PiB-rM-EHz" firstAttribute="leading" secondItem="XtU-is-hBR" secondAttribute="leadingMargin" constant="10" id="JAZ-o0-v6N"/>
                             <constraint firstItem="PiB-rM-EHz" firstAttribute="top" secondItem="516-Tq-LhM" secondAttribute="bottom" constant="50" id="OXI-L7-PTV"/>
                             <constraint firstItem="516-Tq-LhM" firstAttribute="top" secondItem="nGC-Q5-RU4" secondAttribute="bottom" constant="150" id="RNX-uA-7Ir"/>

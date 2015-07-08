@@ -35,14 +35,9 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    switch self.screenWidth {
-      case 480:
-        self.inputHeight = 300
-      default:
-        self.inputHeight = 240
-    }
+   
     // 各ビューをセット
+    self.changeInputHeight()
     self.nextButtonBoard = NextButtonBoard(screenWidth: self.screenWidth, screenHeight: self.screenHeight, viewHeight: self.inputHeight)
     self.nextButtonBoard.delegate = self
     self.inputBoard = InputBoard(screenWidth: self.screenWidth, screenHeight: self.screenHeight, viewHeight: self.inputHeight)
@@ -127,6 +122,15 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   func updateTimer() {
     self.timerCountNum++
     self.timerLabel.text = timerCountNum.convertToStringTime()
+  }
+  
+  func changeInputHeight() {
+    switch self.screenWidth {
+      case 480:
+        self.inputHeight = 300
+      default:
+        self.inputHeight = 240
+    }
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

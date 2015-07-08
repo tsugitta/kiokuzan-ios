@@ -32,18 +32,11 @@ class TopViewController: UIViewController {
     showHighScore(self.backNumber)
   }
   
-  func convertTimerCountNumToString(countNum: Int) -> String {
-    let ms = countNum % 100
-    let s = (countNum - ms) / 100 % 60
-    let m = (countNum - s - ms) / 6000 % 3600
-    return String(format: "%02d:%02d:%02d", m, s, ms)
-  }
-  
   func showHighScore(backNumber: Int) {
     let defaults = NSUserDefaults.standardUserDefaults()
     var highScoreCountNum: AnyObject! = defaults.objectForKey("\(backNumber)BackHighScoreCountNum")
     if highScoreCountNum != nil {
-      highScoreLabel.text = "High Score \(convertTimerCountNumToString(highScoreCountNum as! Int))"
+      highScoreLabel.text = "High Score \((highScoreCountNum as! Int).convertToStringTime())"
     } else {
       highScoreLabel.text = ""
     }
@@ -89,4 +82,3 @@ class TopViewController: UIViewController {
     super.didReceiveMemoryWarning()
   }
 }
-

@@ -9,6 +9,10 @@
 import UIKit
 
 extension Int {
+  static func getRandomInt(n: Int) -> Int {
+    return Int(arc4random_uniform(UInt32(n)))
+  }
+  
   func returnRandomDivisoraFactor() -> Int {
     if self <= 0 {
       return Int(0)
@@ -23,8 +27,11 @@ extension Int {
     }
   }
   
-  static func getRandomInt(n: Int) -> Int {
-    return Int(arc4random_uniform(UInt32(n)))
+  func convertToStringTime() -> String {
+    let ms = self % 100
+    let s = (self - ms) / 100 % 60
+    let m = (self - s - ms) / 6000 % 3600
+    return String(format: "%02d:%02d:%02d", m, s, ms)
   }
 }
 

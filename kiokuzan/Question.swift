@@ -38,7 +38,6 @@ class Question: NSObject {
   }
 
   class func isWrongAnswer(questionArray: [Question], currentQuestionNumber: Int, backNumber: Int, numberText: String) -> Bool {
-    println(questionArray[currentQuestionNumber - backNumber - 1])
     if numberText.toInt() != questionArray[currentQuestionNumber - backNumber - 1].answer {
       return true
     } else {

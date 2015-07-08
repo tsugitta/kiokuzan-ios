@@ -41,6 +41,9 @@
 		DF43C4011B47DFCA0018484B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4001B47DFCA0018484B /* CustomButton.swift */; };
 		DF43C4031B47F3520018484B /* InputBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4021B47F3520018484B /* InputBoard.swift */; };
 		DF43C4051B48E3A30018484B /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF43C4041B48E3A30018484B /* Question.swift */; };
+		DF47ECEC1B4D33FC008C9239 /* Twitter-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF47ECEA1B4D33FC008C9239 /* Twitter-100.png */; };
+		DF47ECED1B4D33FC008C9239 /* Facebook-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */; };
+		DF47ECEF1B4D3FE4008C9239 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47ECEE1B4D3FE4008C9239 /* CustomView.swift */; };
 		DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */; };
 		DFA4664E1B4B190D0061D3F5 /* NextButtonBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */; };
 		DFA466521B4B1D080061D3F5 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */; };
@@ -99,6 +102,9 @@
 		DF43C4001B47DFCA0018484B /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DF43C4021B47F3520018484B /* InputBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBoard.swift; sourceTree = "<group>"; };
 		DF43C4041B48E3A30018484B /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		DF47ECEA1B4D33FC008C9239 /* Twitter-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter-100.png"; sourceTree = "<group>"; };
+		DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-100.png"; sourceTree = "<group>"; };
+		DF47ECEE1B4D3FE4008C9239 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountDownViewController.swift; sourceTree = "<group>"; };
 		DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButtonBoard.swift; sourceTree = "<group>"; };
 		DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionUIColor.swift; path = ../ExtensionUIColor.swift; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 			children = (
 				DF29C51E1B4BBF4D00D01BD1 /* Idea-58.png */,
 				DF29C51F1B4BBF4D00D01BD1 /* Idea-80.png */,
+				DF47ECEA1B4D33FC008C9239 /* Twitter-100.png */,
+				DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */,
 				DF29C5241B4BBFD500D01BD1 /* Idea-87.png */,
 				DF29C5251B4BBFD500D01BD1 /* Idea-180.png */,
 				DF29C5201B4BBF4D00D01BD1 /* Idea-120.png */,
@@ -259,6 +267,7 @@
 				DFA4665A1B4B2A9C0061D3F5 /* QuestionView.xib */,
 				DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */,
 				DF43C4001B47DFCA0018484B /* CustomButton.swift */,
+				DF47ECEE1B4D3FE4008C9239 /* CustomView.swift */,
 			);
 			name = ViewItems;
 			sourceTree = "<group>";
@@ -355,9 +364,11 @@
 				DF29C5261B4BBFD500D01BD1 /* Idea-87.png in Resources */,
 				DFA4665B1B4B2A9C0061D3F5 /* QuestionView.xib in Resources */,
 				DF43C3E41B47D9F80018484B /* Main.storyboard in Resources */,
+				DF47ECEC1B4D33FC008C9239 /* Twitter-100.png in Resources */,
 				DF29C5231B4BBF4D00D01BD1 /* Idea-120.png in Resources */,
 				DF29C5271B4BBFD500D01BD1 /* Idea-180.png in Resources */,
 				DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */,
+				DF47ECED1B4D33FC008C9239 /* Facebook-100.png in Resources */,
 				DF29C5211B4BBF4D00D01BD1 /* Idea-58.png in Resources */,
 				DF43C3E61B47D9F80018484B /* Images.xcassets in Resources */,
 				DF2858101B4C5EBD00872A15 /* Sparkle.png in Resources */,
@@ -404,6 +415,7 @@
 				DF2858031B4C5EBD00872A15 /* LTEmitterView.swift in Sources */,
 				DF2858061B4C5EBD00872A15 /* LTMorphingLabel+Burn.swift in Sources */,
 				DFA466521B4B1D080061D3F5 /* ExtensionUIColor.swift in Sources */,
+				DF47ECEF1B4D3FE4008C9239 /* CustomView.swift in Sources */,
 				DF28580B1B4C5EBD00872A15 /* LTMorphingLabel.swift in Sources */,
 				DF2858121B4C7A7900872A15 /* DescriptionViewController.swift in Sources */,
 				DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */,

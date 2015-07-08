@@ -12,7 +12,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   let screenWidth: Double = Double(UIScreen.mainScreen().bounds.size.width) // 画面の横幅
   let screenHeight: Double = Double(UIScreen.mainScreen().bounds.size.height) // 画面の縦
   let statusBarHeight: Double = Double(UIApplication.sharedApplication().statusBarFrame.height)
-  let inputHeight: Double = 300.0 // どのデバイスでも入力フォームの高さは同じに
+  var inputHeight: Double!
   
   var nextButtonBoard: NextButtonBoard!
   var inputBoard: InputBoard!
@@ -36,6 +36,12 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    switch self.screenWidth {
+      case 480:
+        self.inputHeight = 300
+      default:
+        self.inputHeight = 240
+    }
     // 各ビューをセット
     self.nextButtonBoard = NextButtonBoard(screenWidth: self.screenWidth, screenHeight: self.screenHeight, viewHeight: self.inputHeight)
     self.nextButtonBoard.delegate = self
@@ -120,14 +126,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   
   func updateTimer() {
     self.timerCountNum++
-    self.timeFormat(timerCountNum)
-  }
-  
-  func timeFormat(countNum: Int) {
-    let ms = countNum % 100
-    let s = (countNum - ms) / 100 % 60
-    let m = (countNum - s - ms) / 6000 % 3600
-    self.timerLabel.text = String(format: "%02d:%02d.%02d", m, s, ms)
+    self.timerLabel.text = timerCountNum.convertToStringTime()
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

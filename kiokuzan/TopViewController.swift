@@ -12,10 +12,14 @@ class TopViewController: UIViewController {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var numberOfQuestions: UILabel!
   @IBOutlet weak var highScoreLabel: UILabel!
+  @IBOutlet weak var marginTopOfTitle: NSLayoutConstraint!
   var backNumber = 3
+
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.changeConstrains()
     
     // 文字間隔調整
     let attributedText = NSMutableAttributedString(string: "kiokuzan")
@@ -60,6 +64,15 @@ class TopViewController: UIViewController {
         break
     }
     showHighScore(backNumber)
+  }
+  
+  func changeConstrains() {
+    switch Double(UIScreen.mainScreen().bounds.size.height) {
+    case 480:
+      self.marginTopOfTitle.constant = 20
+    default:
+      break
+    }
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

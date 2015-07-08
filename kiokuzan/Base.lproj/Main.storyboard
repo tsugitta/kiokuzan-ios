@@ -407,12 +407,12 @@ one by one.</string>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="CVD-NU-Jt2"/>
-                                <exclude reference="XfX-Ot-9DS"/>
-                                <exclude reference="l7J-5x-wZi"/>
                                 <exclude reference="RNX-uA-7Ir"/>
                                 <exclude reference="Vrl-Qt-95B"/>
                                 <exclude reference="ztq-lD-gPE"/>
+                                <exclude reference="CVD-NU-Jt2"/>
+                                <exclude reference="XfX-Ot-9DS"/>
+                                <exclude reference="l7J-5x-wZi"/>
                                 <exclude reference="P1Z-az-BDo"/>
                                 <exclude reference="30V-hf-ZQs"/>
                                 <exclude reference="8lt-Mb-I9z"/>

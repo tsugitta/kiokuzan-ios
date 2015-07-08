@@ -23,7 +23,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   var answerNumberLabel: UILabel!
   
   var questionArray: [Question] = []
-  var totalQuestionNumber: Int!
+  var numberOfQuestions: Int!
   var backNumber: Int!
   var currentQuestionNumber: Int = 0
   var currentAnswerNumber: Int = 0
@@ -50,17 +50,8 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     self.questionLabel.morphingEffect = .Evaporate
 
     // 問題作成
-    switch self.backNumber {
-      case 3:
-        totalQuestionNumber = 20
-      case 5:
-        totalQuestionNumber = 25
-      case 10:
-        totalQuestionNumber = 30
-      default:
-        break
-    }
-    questionArray = Question.generateQuestionArray(numberOfQuestions: self.totalQuestionNumber)
+    self.numberOfQuestions = Question.returnNumberOfQuestions(self.backNumber)
+    questionArray = Question.generateQuestionArray(self.numberOfQuestions)
 
     // 問題表示
     self.questionView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.screenWidth, height: self.screenHeight - self.inputHeight - self.statusBarHeight)
@@ -79,20 +70,20 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   }
 
   func updateQuestion() {
-    currentQuestionNumber++
-    if currentQuestionNumber > backNumber {
-      if currentAnswerNumber + 1 > totalQuestionNumber {
+    self.currentQuestionNumber++
+    if self.currentQuestionNumber > self.backNumber {
+      if self.currentAnswerNumber + 1 > self.numberOfQuestions {
         timer.invalidate()
         performSegueWithIdentifier("fromPlayToResultSegue",sender: nil)
       } else {
-        currentAnswerNumber++
+        self.currentAnswerNumber++
       }
     }
-    updateQuestionView()
+    self.updateQuestionView()
   }
   
   func updateQuestionView() {
-    if self.currentQuestionNumber <= self.totalQuestionNumber {
+    if self.currentQuestionNumber <= self.numberOfQuestions {
       var currentQuestion = self.questionArray[self.currentQuestionNumber - 1]
       self.questionNumberLabel.text = "Q\(self.currentQuestionNumber)"
       self.questionLabel.text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
@@ -107,19 +98,6 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     }
   }
   
-  func checkAnswer(numberText: String) {
-    if numberText == "Path" {
-      self.missCount++
-      self.timerCountNum += self.missPenaltySecond * 100
-    } else {
-      var inputNumber = numberText.toInt()
-      if self.questionArray[self.currentQuestionNumber - self.backNumber - 1].answer != inputNumber {
-        self.missCount++
-        self.timerCountNum += self.missPenaltySecond * 100
-      }
-    }
-  }
-  
   func pushedNext() {
     updateQuestion()
     if currentQuestionNumber > backNumber {
@@ -129,7 +107,10 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   }
 
   func pushedNumber(numberText: String) {
-    checkAnswer(numberText)
+    if Question.isWrongAnswer(self.questionArray, currentQuestionNumber: self.currentQuestionNumber, backNumber: self.backNumber, numberText: numberText) {
+      self.missCount++
+      self.timerCountNum += self.missPenaltySecond * 100
+    }
     updateQuestion()
   }
   
@@ -138,8 +119,8 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   }
   
   func updateTimer() {
-    timerCountNum++
-    timeFormat(timerCountNum)
+    self.timerCountNum++
+    self.timeFormat(timerCountNum)
   }
   
   func timeFormat(countNum: Int) {

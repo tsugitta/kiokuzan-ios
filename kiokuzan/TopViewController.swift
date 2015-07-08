@@ -12,15 +12,17 @@ class TopViewController: UIViewController {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var numberOfQuestions: UILabel!
   @IBOutlet weak var highScoreLabel: UILabel!
-  @IBOutlet weak var marginTopOfTitle: NSLayoutConstraint!
+  @IBOutlet weak var marginBottomOfTitle: NSLayoutConstraint!
+  @IBOutlet weak var marginTopOfBackNumber: NSLayoutConstraint!
+  @IBOutlet weak var marginTopOfNumberOfQuestions: NSLayoutConstraint!
+  @IBOutlet weak var marginTopOfStartButton: NSLayoutConstraint!
+  var logoImageView: UIImageView!
   var backNumber = 3
-
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.changeConstrains()
-    
+
     // 文字間隔調整
     let attributedText = NSMutableAttributedString(string: "kiokuzan")
     let customLetterSpacing = 4.5
@@ -62,7 +64,15 @@ class TopViewController: UIViewController {
   func changeConstrains() {
     switch Double(UIScreen.mainScreen().bounds.size.height) {
     case 480:
-      self.marginTopOfTitle.constant = 20
+      self.marginBottomOfTitle.constant = 70
+      self.marginTopOfBackNumber.constant = 15
+      self.marginTopOfNumberOfQuestions.constant = 15
+      self.marginTopOfStartButton.constant = 15
+    case 568:
+      self.marginBottomOfTitle.constant = 120
+      self.marginTopOfBackNumber.constant = 25
+      self.marginTopOfNumberOfQuestions.constant = 25
+      self.marginTopOfStartButton.constant = 25
     default:
       break
     }

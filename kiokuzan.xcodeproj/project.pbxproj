@@ -44,6 +44,7 @@
 		DF47ECEC1B4D33FC008C9239 /* Twitter-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF47ECEA1B4D33FC008C9239 /* Twitter-100.png */; };
 		DF47ECED1B4D33FC008C9239 /* Facebook-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */; };
 		DF47ECEF1B4D3FE4008C9239 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF47ECEE1B4D3FE4008C9239 /* CustomView.swift */; };
+		DF47ECF31B4DA062008C9239 /* Idea-1000.png in Resources */ = {isa = PBXBuildFile; fileRef = DF47ECF21B4DA062008C9239 /* Idea-1000.png */; };
 		DFA466491B4B025C0061D3F5 /* StartCountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */; };
 		DFA4664E1B4B190D0061D3F5 /* NextButtonBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */; };
 		DFA466521B4B1D080061D3F5 /* ExtensionUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */; };
@@ -105,6 +106,7 @@
 		DF47ECEA1B4D33FC008C9239 /* Twitter-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter-100.png"; sourceTree = "<group>"; };
 		DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook-100.png"; sourceTree = "<group>"; };
 		DF47ECEE1B4D3FE4008C9239 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		DF47ECF21B4DA062008C9239 /* Idea-1000.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Idea-1000.png"; sourceTree = "<group>"; };
 		DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCountDownViewController.swift; sourceTree = "<group>"; };
 		DFA4664D1B4B190D0061D3F5 /* NextButtonBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButtonBoard.swift; sourceTree = "<group>"; };
 		DFA466511B4B1D080061D3F5 /* ExtensionUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExtensionUIColor.swift; path = ../ExtensionUIColor.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				DF47ECEA1B4D33FC008C9239 /* Twitter-100.png */,
 				DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */,
 				DF29C5241B4BBFD500D01BD1 /* Idea-87.png */,
+				DF47ECF21B4DA062008C9239 /* Idea-1000.png */,
 				DF29C5251B4BBFD500D01BD1 /* Idea-180.png */,
 				DF29C5201B4BBF4D00D01BD1 /* Idea-120.png */,
 				DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */,
@@ -200,16 +203,13 @@
 		DF43C3DB1B47D9F80018484B /* kiokuzan */ = {
 			isa = PBXGroup;
 			children = (
+				DF47ECF41B4DA323008C9239 /* Application */,
 				DFA4664B1B4B09F40061D3F5 /* Model */,
 				DFA4664A1B4B09D90061D3F5 /* Controller */,
 				DFA4664C1B4B0A000061D3F5 /* ViewItems */,
 				DFA466531B4B1DDF0061D3F5 /* Extension */,
 				DF29C51D1B4BBEE700D01BD1 /* images */,
 				DF2857EC1B4C5EBC00872A15 /* LTMorphingLabel */,
-				DF43C3E21B47D9F80018484B /* Main.storyboard */,
-				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
-				DF43C3E51B47D9F80018484B /* Images.xcassets */,
-				DF43C3E71B47D9F80018484B /* LaunchScreen.xib */,
 				DF43C3DC1B47D9F80018484B /* Supporting Files */,
 			);
 			path = kiokuzan;
@@ -238,6 +238,17 @@
 				DF43C3F31B47D9F80018484B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF47ECF41B4DA323008C9239 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DF43C3E21B47D9F80018484B /* Main.storyboard */,
+				DF43C3DE1B47D9F80018484B /* AppDelegate.swift */,
+				DF43C3E51B47D9F80018484B /* Images.xcassets */,
+				DF43C3E71B47D9F80018484B /* LaunchScreen.xib */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		DFA4664A1B4B09D90061D3F5 /* Controller */ = {
@@ -370,6 +381,7 @@
 				DF43C3E91B47D9F80018484B /* LaunchScreen.xib in Resources */,
 				DF47ECED1B4D33FC008C9239 /* Facebook-100.png in Resources */,
 				DF29C5211B4BBF4D00D01BD1 /* Idea-58.png in Resources */,
+				DF47ECF31B4DA062008C9239 /* Idea-1000.png in Resources */,
 				DF43C3E61B47D9F80018484B /* Images.xcassets in Resources */,
 				DF2858101B4C5EBD00872A15 /* Sparkle.png in Resources */,
 				DF28580E1B4C5EBD00872A15 /* Fragment.png in Resources */,

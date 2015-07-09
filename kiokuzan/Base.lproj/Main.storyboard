@@ -49,68 +49,87 @@
                                 <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mB-mL-XWI">
-                                <rect key="frame" x="56" y="223" width="263" height="36"/>
-                                <string key="text">Several easy questions appear
-one by one.</string>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The penalty of a mistake is 10 sec." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-On-XeY">
-                                <rect key="frame" x="56" y="373" width="263" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is the time to answer all." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-LD-cF1">
-                                <rect key="frame" x="56" y="335" width="263" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-OP-bUD">
-                                <rect key="frame" x="56" y="279" width="263" height="36"/>
-                                <string key="text">Tap the answer which appeard
-3, 5 or 10 times ago.</string>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Og-Hm-BRj" customClass="CustomView" customModule="kiokuzan" customModuleProvider="target">
+                                <rect key="frame" x="56" y="193" width="263" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Several easy questions appear one by one." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mB-mL-XWI">
+                                        <rect key="frame" x="10" y="20" width="243" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The penalty of a mistake is 10 sec." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpM-On-XeY">
+                                        <rect key="frame" x="10" y="170" width="243" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your score is the time to answer all." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OjT-LD-cF1">
+                                        <rect key="frame" x="10" y="132" width="243" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the answer which appeard 3, 5 or 10 times ago." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-OP-bUD">
+                                        <rect key="frame" x="10" y="76" width="243" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rpM-On-XeY" secondAttribute="trailing" constant="10" id="0wm-Ep-B0T"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Tq-OP-bUD" secondAttribute="trailing" constant="10" id="0yr-RU-6Fw"/>
+                                    <constraint firstAttribute="centerX" secondItem="OjT-LD-cF1" secondAttribute="centerX" id="1cj-6O-DkN"/>
+                                    <constraint firstAttribute="bottom" secondItem="rpM-On-XeY" secondAttribute="bottom" constant="20" id="1fC-3M-i9G"/>
+                                    <constraint firstAttribute="centerX" secondItem="3Tq-OP-bUD" secondAttribute="centerX" id="3bH-99-tb8"/>
+                                    <constraint firstAttribute="trailing" secondItem="5mB-mL-XWI" secondAttribute="trailing" constant="10" id="5om-oj-xoE"/>
+                                    <constraint firstAttribute="centerX" secondItem="5mB-mL-XWI" secondAttribute="centerX" id="ELl-Ju-qOL"/>
+                                    <constraint firstItem="OjT-LD-cF1" firstAttribute="top" secondItem="3Tq-OP-bUD" secondAttribute="bottom" constant="20" id="Jt5-4l-5Hd"/>
+                                    <constraint firstItem="3Tq-OP-bUD" firstAttribute="top" secondItem="5mB-mL-XWI" secondAttribute="bottom" constant="20" id="Lyb-J3-NCn"/>
+                                    <constraint firstItem="rpM-On-XeY" firstAttribute="top" secondItem="OjT-LD-cF1" secondAttribute="bottom" constant="20" id="Q8c-R7-J3B"/>
+                                    <constraint firstAttribute="trailing" secondItem="OjT-LD-cF1" secondAttribute="trailing" constant="10" id="VxK-oi-Xd3"/>
+                                    <constraint firstItem="3Tq-OP-bUD" firstAttribute="leading" secondItem="8Og-Hm-BRj" secondAttribute="leading" constant="10" id="Zfw-oh-xhg"/>
+                                    <constraint firstAttribute="centerX" secondItem="rpM-On-XeY" secondAttribute="centerX" id="bUx-am-HN1"/>
+                                    <constraint firstItem="5mB-mL-XWI" firstAttribute="leading" secondItem="8Og-Hm-BRj" secondAttribute="leading" constant="10" id="e1u-32-hQd"/>
+                                    <constraint firstItem="5mB-mL-XWI" firstAttribute="top" secondItem="8Og-Hm-BRj" secondAttribute="top" constant="20" id="keP-Wr-FvS"/>
+                                    <constraint firstItem="OjT-LD-cF1" firstAttribute="leading" secondItem="8Og-Hm-BRj" secondAttribute="leading" constant="10" id="pFW-SL-Xre"/>
+                                    <constraint firstItem="rpM-On-XeY" firstAttribute="leading" secondItem="8Og-Hm-BRj" secondAttribute="leading" constant="10" id="pp3-zV-O0l"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.094117647060000004" green="0.56862745100000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="rpM-On-XeY" firstAttribute="top" secondItem="OjT-LD-cF1" secondAttribute="bottom" constant="20" id="CcV-2D-8Zn"/>
-                            <constraint firstItem="5mB-mL-XWI" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="CfY-PH-Kib"/>
+                            <constraint firstItem="8Og-Hm-BRj" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="3Li-wS-gvN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Og-Hm-BRj" secondAttribute="trailing" constant="40" id="5pt-KW-Av3"/>
+                            <constraint firstItem="8Og-Hm-BRj" firstAttribute="top" secondItem="t5h-Ek-XSv" secondAttribute="bottom" constant="20" id="DU3-FX-c8w"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ckR-ha-SBD" secondAttribute="trailing" constant="40" id="Hiy-oh-mfe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Tq-OP-bUD" secondAttribute="trailing" constant="40" id="J2M-fU-dmO"/>
-                            <constraint firstItem="OjT-LD-cF1" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="JPO-Pl-w1a"/>
-                            <constraint firstItem="3Tq-OP-bUD" firstAttribute="top" secondItem="5mB-mL-XWI" secondAttribute="bottom" constant="20" id="OC6-ed-4US"/>
-                            <constraint firstItem="t5h-Ek-XSv" firstAttribute="bottom" secondItem="3Tq-OP-bUD" secondAttribute="top" constant="-20" id="UgL-y5-ab0"/>
-                            <constraint firstItem="3Tq-OP-bUD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="VgA-nU-7wB"/>
-                            <constraint firstItem="rpM-On-XeY" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="W5O-7i-6HS"/>
-                            <constraint firstItem="OjT-LD-cF1" firstAttribute="top" secondItem="3Tq-OP-bUD" secondAttribute="bottom" constant="20" id="bpf-Bt-Tfo"/>
                             <constraint firstItem="ckR-ha-SBD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="c85-2T-J06"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5mB-mL-XWI" secondAttribute="trailing" constant="40" id="cjL-wN-2Ui"/>
-                            <constraint firstItem="3Tq-OP-bUD" firstAttribute="leading" secondItem="IKa-hF-be5" secondAttribute="leadingMargin" constant="40" id="gge-4L-PoD"/>
                             <constraint firstItem="eB0-Vt-5gz" firstAttribute="top" secondItem="ckR-ha-SBD" secondAttribute="bottom" constant="80" id="iBA-SA-RzD"/>
                             <constraint firstItem="t5h-Ek-XSv" firstAttribute="top" secondItem="l2L-AW-0c4" secondAttribute="bottom" constant="100" id="lPb-fN-5s1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OjT-LD-cF1" secondAttribute="trailing" constant="40" id="pyY-Jg-adj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="rpM-On-XeY" secondAttribute="trailing" constant="40" id="sna-ce-eeb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Tq-OP-bUD" secondAttribute="trailing" constant="40" id="t8e-Pz-fZ9"/>
                             <constraint firstAttribute="centerX" secondItem="t5h-Ek-XSv" secondAttribute="centerX" id="wwf-ZI-Sej"/>
-                            <constraint firstItem="5mB-mL-XWI" firstAttribute="top" secondItem="t5h-Ek-XSv" secondAttribute="bottom" constant="50" id="y9g-hQ-wZE"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="UgL-y5-ab0"/>
-                                <exclude reference="VgA-nU-7wB"/>
-                                <exclude reference="t8e-Pz-fZ9"/>
-                            </mask>
-                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="marginBottomOf4thDescription" destination="1fC-3M-i9G" id="5zy-6K-U9i"/>
+                        <outlet property="marginTopOf1stDescription" destination="keP-Wr-FvS" id="d3O-Nn-kMb"/>
+                        <outlet property="marginTopOf2ndDescription" destination="Lyb-J3-NCn" id="4Bh-Qg-Ykp"/>
+                        <outlet property="marginTopOf3rdDescription" destination="Jt5-4l-5Hd" id="MAa-vw-yHw"/>
+                        <outlet property="marginTopOf4thDescription" destination="Q8c-R7-J3B" id="h66-Wi-PeS"/>
+                        <outlet property="marginTopOfCustomView" destination="DU3-FX-c8w" id="egp-Gd-TT7"/>
                         <outlet property="marginTopOfTitle" destination="lPb-fN-5s1" id="jGy-ns-SRo"/>
                     </connections>
                 </viewController>

@@ -501,6 +501,7 @@ one by one.</string>
                         <outlet property="marginLeftOfCustomView" destination="Uz2-OM-qdA" id="kJp-Si-pCo"/>
                         <outlet property="marginRightOfBackButton" destination="xps-2S-5Yx" id="ChY-B2-EVP"/>
                         <outlet property="marginRightOfCustomView" destination="HE7-Xt-QEu" id="fvT-gW-FFN"/>
+                        <outlet property="marginTopOfBackButton" destination="yLb-vw-ehi" id="NZq-WE-wGg"/>
                         <outlet property="marginTopOfCustomView" destination="OXI-L7-PTV" id="xqD-j4-jYK"/>
                         <outlet property="marginTopOfScore" destination="5ti-jz-12a" id="iUM-mR-M45"/>
                         <outlet property="missLabel" destination="SJu-Ql-z12" id="mfd-cd-J4z"/>

@@ -22,8 +22,9 @@ class ResultViewController: UIViewController {
   @IBOutlet weak var marginRightOfCustomView: NSLayoutConstraint!
   @IBOutlet weak var marginLeftOfBackButton: NSLayoutConstraint!
   @IBOutlet weak var marginRightOfBackButton: NSLayoutConstraint!
+  @IBOutlet weak var marginTopOfBackButton: NSLayoutConstraint!
   @IBOutlet weak var marginBottomOfBackButton: NSLayoutConstraint!
-  
+
   var timerCountNum: Int!
   var missCount: Int!
   var backNumber: Int!
@@ -63,20 +64,16 @@ class ResultViewController: UIViewController {
     switch Double(UIScreen.mainScreen().bounds.size.height) {
       case 480:
         self.marginTopOfScore.constant = 0
-        self.marginTopOfCustomView.constant = 0
-        self.marginLeftOfCustomView.constant = 10
-        self.marginRightOfCustomView.constant = 10
-        self.marginLeftOfBackButton.constant = 10
-        self.marginRightOfBackButton.constant = 10
+        self.marginTopOfCustomView.constant = 10
+        self.marginLeftOfCustomView.constant = 20
+        self.marginRightOfCustomView.constant = 20
+        self.marginLeftOfBackButton.constant = 20
+        self.marginRightOfBackButton.constant = 20
         self.marginBottomOfBackButton.constant = 20
       case 568:
-        self.marginTopOfScore.constant = 10
-        self.marginTopOfCustomView.constant = 10
-        self.marginLeftOfCustomView.constant = 10
-        self.marginRightOfCustomView.constant = 10
-        self.marginLeftOfBackButton.constant = 10
-        self.marginRightOfBackButton.constant = 10
-        self.marginBottomOfBackButton.constant = 40
+        self.marginTopOfScore.constant = 30
+        self.marginTopOfCustomView.constant = 30
+        self.marginTopOfBackButton.constant = 20
       default:
         break
     }

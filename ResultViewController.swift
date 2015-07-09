@@ -85,6 +85,10 @@ class ResultViewController: UIViewController {
         self.marginTopOfScore.constant = 30
         self.marginTopOfCustomView.constant = 30
         self.marginTopOfBackButton.constant = 20
+        self.marginLeftOfCustomView.constant = 30
+        self.marginRightOfCustomView.constant = 30
+        self.marginLeftOfBackButton.constant = 30
+        self.marginRightOfBackButton.constant = 30
       default:
         break
     }

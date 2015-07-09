@@ -51,6 +51,7 @@
 		DFA466551B4B1DFD0061D3F5 /* ExtensionInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA466541B4B1DFD0061D3F5 /* ExtensionInt.swift */; };
 		DFA4665B1B4B2A9C0061D3F5 /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA4665A1B4B2A9C0061D3F5 /* QuestionView.xib */; };
 		DFA4665D1B4B41690061D3F5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */; };
+		DFD3AAED1B4F0D67007D37B7 /* Crown-100.png in Resources */ = {isa = PBXBuildFile; fileRef = DFD3AAEC1B4F0D67007D37B7 /* Crown-100.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		DFA466541B4B1DFD0061D3F5 /* ExtensionInt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionInt.swift; sourceTree = "<group>"; };
 		DFA4665A1B4B2A9C0061D3F5 /* QuestionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QuestionView.xib; path = ../QuestionView.xib; sourceTree = "<group>"; };
 		DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultViewController.swift; path = ../ResultViewController.swift; sourceTree = "<group>"; };
+		DFD3AAEC1B4F0D67007D37B7 /* Crown-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Crown-100.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 				DF47ECEB1B4D33FC008C9239 /* Facebook-100.png */,
 				DF29C5241B4BBFD500D01BD1 /* Idea-87.png */,
 				DF47ECF21B4DA062008C9239 /* Idea-1000.png */,
+				DFD3AAEC1B4F0D67007D37B7 /* Crown-100.png */,
 				DF29C5251B4BBFD500D01BD1 /* Idea-180.png */,
 				DF29C5201B4BBF4D00D01BD1 /* Idea-120.png */,
 				DF29C51B1B4BBD7900D01BD1 /* Idea-100.png */,
@@ -389,6 +392,7 @@
 				DF29C5221B4BBF4D00D01BD1 /* Idea-80.png in Resources */,
 				DF28580D1B4C5EBD00872A15 /* Fire.png in Resources */,
 				DF29C51C1B4BBD7900D01BD1 /* Idea-100.png in Resources */,
+				DFD3AAED1B4F0D67007D37B7 /* Crown-100.png in Resources */,
 				DF2858001B4C5EBD00872A15 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

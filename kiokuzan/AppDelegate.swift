@@ -65,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // ▼ 7. rootViewController.viewを少し拡大して元に戻すアニメーション
     UIView.animateWithDuration(0.3,
-      delay: 0.5,
+      delay: 0.4,
       options: UIViewAnimationOptions.TransitionNone,
       animations: {
         self.window!.rootViewController!.view.transform = CGAffineTransformMakeScale(1.05, 1.05)

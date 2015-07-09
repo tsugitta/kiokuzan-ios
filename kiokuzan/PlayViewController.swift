@@ -21,6 +21,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   var questionNumberLabel: UILabel!
   var questionLabel: LTMorphingLabel!
   var answerNumberLabel: UILabel!
+  var hangInThereView: UIView!
   
   var questionArray: [Question] = []
   var numberOfQuestions: Int!
@@ -47,6 +48,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     self.questionNumberLabel = self.questionView.viewWithTag(2) as! UILabel
     self.questionLabel = self.questionView.viewWithTag(3) as! LTMorphingLabel
     self.answerNumberLabel = self.questionView.viewWithTag(4) as! UILabel
+    self.hangInThereView = self.questionView.viewWithTag(6)! as UIView
     self.questionLabel.text = ""
     self.questionLabel.morphingEffect = .Evaporate
 
@@ -90,7 +92,8 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
       self.questionLabel.text = "\(currentQuestion.firstItem) \(currentQuestion.operatorSymbol) \(currentQuestion.secondItem) = ?"
     } else {
       self.questionNumberLabel.text = ""
-      self.questionLabel.text = "Hang in there!"
+      self.questionLabel.removeFromSuperview()
+      self.showHangInThereLabel()
     }
     if self.currentAnswerNumber > 0 {
       self.answerNumberLabel.text = "Answer Q\(self.currentAnswerNumber)."
@@ -131,6 +134,17 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
       default:
         self.inputHeight = 240
     }
+  }
+  
+  func showHangInThereLabel() {
+    UIView.animateWithDuration(0.3,
+      delay: 0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {
+        self.hangInThereView.alpha = 1
+      },
+      completion: nil
+    )
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

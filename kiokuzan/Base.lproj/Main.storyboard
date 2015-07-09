@@ -374,7 +374,7 @@ one by one.</string>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-FS-iwA">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-FS-iwA">
                                         <rect key="frame" x="162" y="227" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NCD-D6-W8y"/>
@@ -383,11 +383,8 @@ one by one.</string>
                                         <state key="normal" image="Facebook-100.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="pushFaceBook:" destination="jJI-JE-H7m" eventType="touchUpInside" id="fBR-cS-aeu"/>
-                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-Nu-EFa">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-Nu-EFa">
                                         <rect key="frame" x="213" y="227" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="HJq-d0-cVA"/>
@@ -404,9 +401,6 @@ one by one.</string>
                                                 <exclude reference="q8V-xt-VnO"/>
                                             </mask>
                                         </variation>
-                                        <connections>
-                                            <action selector="pushTwitter:" destination="jJI-JE-H7m" eventType="touchUpInside" id="KGY-Z7-Njs"/>
-                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldj-E5-4Rz">
                                         <rect key="frame" x="10" y="10" width="90" height="39"/>
@@ -495,6 +489,7 @@ one by one.</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backLabel" destination="ldj-E5-4Rz" id="qOj-rz-mp2"/>
+                        <outlet property="facebookButton" destination="fAE-FS-iwA" id="mkV-QW-EHu"/>
                         <outlet property="highScoreLabel" destination="ALQ-3P-iJK" id="MRe-sw-iSZ"/>
                         <outlet property="marginBottomOfBackButton" destination="HyH-Yj-ivZ" id="ijb-WM-3Ut"/>
                         <outlet property="marginLeftOfBackButton" destination="m4I-vj-CaI" id="lgW-2d-TPD"/>
@@ -506,7 +501,8 @@ one by one.</string>
                         <outlet property="marginTopOfScore" destination="5ti-jz-12a" id="iUM-mR-M45"/>
                         <outlet property="missLabel" destination="SJu-Ql-z12" id="mfd-cd-J4z"/>
                         <outlet property="scoreLabel" destination="qlj-zX-AAW" id="9PB-5A-VaY"/>
-                        <outlet property="scoreView" destination="PiB-rM-EHz" id="d9B-eB-H5s"/>
+                        <outlet property="scoreView" destination="PiB-rM-EHz" id="3aV-tU-O96"/>
+                        <outlet property="twitterButton" destination="8Zc-Nu-EFa" id="Zom-Df-9BQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkY-tZ-oZX" userLabel="First Responder" sceneMemberID="firstResponder"/>

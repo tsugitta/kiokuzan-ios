@@ -14,7 +14,7 @@ class ResultViewController: UIViewController {
   @IBOutlet weak var scoreLabel: UILabel!
   @IBOutlet weak var missLabel: UILabel!
   @IBOutlet weak var highScoreLabel: UILabel!
-  @IBOutlet weak var scoreView: UIView!
+  @IBOutlet weak var scoreView: CustomView!
 
   @IBOutlet weak var marginTopOfScore: NSLayoutConstraint!
   @IBOutlet weak var marginTopOfCustomView: NSLayoutConstraint!
@@ -25,9 +25,14 @@ class ResultViewController: UIViewController {
   @IBOutlet weak var marginTopOfBackButton: NSLayoutConstraint!
   @IBOutlet weak var marginBottomOfBackButton: NSLayoutConstraint!
 
+  @IBOutlet weak var facebookButton: UIButton!
+  @IBOutlet weak var twitterButton: UIButton!
+  
   var timerCountNum: Int!
   var missCount: Int!
   var backNumber: Int!
+
+  var scoreImage: UIImage!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,22 +49,28 @@ class ResultViewController: UIViewController {
       defaults.setObject(highScoreCountNum, forKey: "\(backNumber)BackHighScoreCountNum")
     }
     self.highScoreLabel.text = "High Score \((highScoreCountNum as! Int).convertToStringTime())"
+    
+    self.facebookButton.addTarget(self, action: "tapShareButton:", forControlEvents: UIControlEvents.TouchUpInside)
+    self.twitterButton.addTarget(self, action: "tapShareButton:", forControlEvents: UIControlEvents.TouchUpInside)
   }
 
-  @IBAction func pushFaceBook(sender: UIButton) {
-    var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-    facebookVC.setInitialText("google")
-//    facebookVC.addURL(NSURL("http:google.com"))
-    presentViewController(facebookVC, animated: true, completion: nil)
-  }
-
-  @IBAction func pushTwitter(sender: AnyObject) {
-    var twitterVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-    twitterVC.setInitialText("I played Kiokuzan \(self.backNumber) back and got score '\(self.timerCountNum.convertToStringTime())'")
-//    twitterVC.addURL("http://google.com")
-    presentViewController(twitterVC, animated: true, completion: nil)
+  override func viewDidAppear(animated: Bool) {
+    self.scoreImage = scoreView.getImage()
   }
   
+  func tapShareButton(sender: UIButton) {
+    var shareVC: SLComposeViewController!
+    if sender.tag == 1 {
+      shareVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+    } else if sender.tag == 2 {
+      shareVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+    }
+    shareVC.setInitialText("I scored '\(self.timerCountNum.convertToStringTime())' in the iOS game kiokuzan. #kiokuzan #\(self.backNumber)back")
+//    shareVC.addURL(NSURL("http:google.com"))
+    shareVC.addImage(self.scoreImage)
+    presentViewController(shareVC, animated: true, completion: nil)
+  }
+
   func changeConstrains() {
     switch Double(UIScreen.mainScreen().bounds.size.height) {
       case 480:

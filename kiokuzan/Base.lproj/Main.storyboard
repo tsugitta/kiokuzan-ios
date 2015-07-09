@@ -395,7 +395,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAE-FS-iwA">
-                                        <rect key="frame" x="162" y="227" width="40" height="40"/>
+                                        <rect key="frame" x="163" y="227" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NCD-D6-W8y"/>
                                             <constraint firstAttribute="width" constant="40" id="PaK-Nb-qtX"/>
@@ -403,6 +403,19 @@
                                         <state key="normal" image="Facebook-100.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-dL-7j7">
+                                        <rect key="frame" x="10" y="227" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Qfj-2j-neg"/>
+                                            <constraint firstAttribute="height" constant="40" id="xjS-j4-41w"/>
+                                        </constraints>
+                                        <state key="normal" image="Crown-100.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapRankingButton:" destination="jJI-JE-H7m" eventType="touchUpInside" id="Qtr-Kj-X5v"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zc-Nu-EFa">
                                         <rect key="frame" x="213" y="227" width="40" height="40"/>
@@ -431,6 +444,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VAp-dL-7j7" secondAttribute="bottom" constant="10" id="3xf-7S-PWM"/>
                                     <constraint firstAttribute="centerY" secondItem="qlj-zX-AAW" secondAttribute="centerY" id="6ea-6m-sYC"/>
                                     <constraint firstAttribute="trailing" secondItem="SJu-Ql-z12" secondAttribute="trailing" constant="10" id="6oi-Od-DUE"/>
                                     <constraint firstAttribute="bottom" secondItem="8Zc-Nu-EFa" secondAttribute="bottom" constant="10" id="9Kh-vZ-cfB"/>
@@ -443,9 +457,10 @@
                                     <constraint firstItem="SJu-Ql-z12" firstAttribute="top" secondItem="PiB-rM-EHz" secondAttribute="top" constant="10" id="Vs5-Ba-71G"/>
                                     <constraint firstItem="SJu-Ql-z12" firstAttribute="top" secondItem="qlj-zX-AAW" secondAttribute="bottom" id="WDK-Ls-KUm"/>
                                     <constraint firstItem="ldj-E5-4Rz" firstAttribute="leading" secondItem="PiB-rM-EHz" secondAttribute="leading" constant="10" id="WDb-jQ-PD1"/>
-                                    <constraint firstItem="8Zc-Nu-EFa" firstAttribute="leading" secondItem="fAE-FS-iwA" secondAttribute="trailing" constant="11" id="bra-Yf-6F5"/>
+                                    <constraint firstItem="8Zc-Nu-EFa" firstAttribute="leading" secondItem="fAE-FS-iwA" secondAttribute="trailing" constant="10" id="bra-Yf-6F5"/>
                                     <constraint firstItem="ldj-E5-4Rz" firstAttribute="top" secondItem="PiB-rM-EHz" secondAttribute="top" constant="10" id="dRf-Ps-NeU"/>
                                     <constraint firstItem="8Zc-Nu-EFa" firstAttribute="top" secondItem="SJu-Ql-z12" secondAttribute="bottom" constant="40" id="fCS-DZ-4YQ"/>
+                                    <constraint firstItem="VAp-dL-7j7" firstAttribute="leading" secondItem="PiB-rM-EHz" secondAttribute="leading" constant="10" id="wFw-Eb-keJ"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -520,6 +535,7 @@
                         <outlet property="marginTopOfCustomView" destination="OXI-L7-PTV" id="xqD-j4-jYK"/>
                         <outlet property="marginTopOfScore" destination="5ti-jz-12a" id="iUM-mR-M45"/>
                         <outlet property="missLabel" destination="SJu-Ql-z12" id="mfd-cd-J4z"/>
+                        <outlet property="rankingButton" destination="VAp-dL-7j7" id="Vhs-bL-Ai1"/>
                         <outlet property="scoreLabel" destination="qlj-zX-AAW" id="9PB-5A-VaY"/>
                         <outlet property="scoreView" destination="PiB-rM-EHz" id="3aV-tU-O96"/>
                         <outlet property="twitterButton" destination="8Zc-Nu-EFa" id="Zom-Df-9BQ"/>
@@ -532,6 +548,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Crown-100.png" width="100" height="100"/>
         <image name="Facebook-100.png" width="100" height="100"/>
         <image name="Twitter-100.png" width="100" height="100"/>
     </resources>

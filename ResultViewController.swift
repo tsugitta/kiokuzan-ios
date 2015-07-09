@@ -71,6 +71,10 @@ class ResultViewController: UIViewController {
     presentViewController(shareVC, animated: true, completion: nil)
   }
 
+  @IBAction func tapRankingButton(sender: UIButton) {
+    
+  }
+  
   func changeConstrains() {
     switch Double(UIScreen.mainScreen().bounds.size.height) {
       case 480:

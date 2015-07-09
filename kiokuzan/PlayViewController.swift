@@ -21,7 +21,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   var questionNumberLabel: UILabel!
   var questionLabel: LTMorphingLabel!
   var answerNumberLabel: UILabel!
-  var hangInThereView: UIView!
+  var hangInThereLabel: UILabel!
   
   var questionArray: [Question] = []
   var numberOfQuestions: Int!
@@ -48,7 +48,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     self.questionNumberLabel = self.questionView.viewWithTag(2) as! UILabel
     self.questionLabel = self.questionView.viewWithTag(3) as! LTMorphingLabel
     self.answerNumberLabel = self.questionView.viewWithTag(4) as! UILabel
-    self.hangInThereView = self.questionView.viewWithTag(6)! as UIView
+    self.hangInThereLabel = self.questionView.viewWithTag(6) as! UILabel
     self.questionLabel.text = ""
     self.questionLabel.morphingEffect = .Evaporate
 
@@ -141,7 +141,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
       delay: 0,
       options: UIViewAnimationOptions.CurveEaseIn,
       animations: {
-        self.hangInThereView.alpha = 1
+        self.hangInThereLabel.alpha = 1
       },
       completion: nil
     )

@@ -13,7 +13,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5K-sd-oH2">
                     <rect key="frame" x="212" y="129" width="22" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 + 1 = ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8B-Yh-Cmg" customClass="LTMorphingLabel" customModule="kiokuzan" customModuleProvider="target">
@@ -35,32 +35,32 @@
                 <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer Q1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRN-x1-NWX">
                     <rect key="frame" x="184" y="351" width="78" height="21"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgU-Bx-FVX">
                     <rect key="frame" x="178" y="10" width="90" height="28"/>
-                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="23"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hang in there!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fe4-Se-uR3">
                     <rect key="frame" x="103" y="160" width="238" height="52"/>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="43"/>
-                    <color key="textColor" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfz-J6-F90" customClass="CustomButton" customModule="kiokuzan" customModuleProvider="target">
-                    <rect key="frame" x="10" y="10" width="80" height="40"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <rect key="frame" x="10" y="10" width="80" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="80" id="srf-CI-Tdp"/>
-                        <constraint firstAttribute="height" constant="40" id="vsc-tZ-RiA"/>
+                        <constraint firstAttribute="height" constant="35" id="vsc-tZ-RiA"/>
                         <constraint firstAttribute="height" constant="40" id="w2l-2A-sXV"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="18"/>
                     <state key="normal" title="B a c k">
-                        <color key="titleColor" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -71,7 +71,7 @@
                             <real key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" red="0.094828775059999995" green="0.56775084799999997" blue="0.83846275250000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="value" red="0.094117647058823528" green="0.56862745098039214" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <variation key="default">

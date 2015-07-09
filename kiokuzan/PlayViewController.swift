@@ -14,6 +14,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   let statusBarHeight: Double = Double(UIApplication.sharedApplication().statusBarFrame.height)
   var inputHeight: Double!
   
+  var coverView: UIView!
   var nextButtonBoard: NextButtonBoard!
   var inputBoard: InputBoard!
   var questionView: UIView!
@@ -37,6 +38,13 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   override func viewDidLoad() {
     super.viewDidLoad()
    
+    // 正誤判定UIView
+    self.coverView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+    self.coverView.userInteractionEnabled = false
+    self.coverView.alpha = 0.0
+    self.coverView.backgroundColor = UIColor.whiteColor()
+    self.view.addSubview(coverView)
+    
     // 各ビューをセット
     self.changeInputHeight()
     self.nextButtonBoard = NextButtonBoard(screenWidth: self.screenWidth, screenHeight: self.screenHeight, viewHeight: self.inputHeight)
@@ -58,12 +66,13 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
 
     // 問題表示
     self.questionView.frame = CGRect(x: 0, y: self.statusBarHeight, width: self.screenWidth, height: self.screenHeight - self.inputHeight - self.statusBarHeight)
+    self.questionView.backgroundColor = UIColor.clearColor()
     self.view.addSubview(questionView)
     updateQuestion()
     
     // 「Next」ボタン
     self.view.addSubview(self.nextButtonBoard)
-    
+
     // 「Back」ボタン
     var backButton = (self.questionView.viewWithTag(5) as! UIButton)
     backButton.addTarget(self, action: "backButtonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -114,8 +123,60 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
     if Question.isWrongAnswer(self.questionArray, currentQuestionNumber: self.currentQuestionNumber, backNumber: self.backNumber, numberText: numberText) {
       self.missCount++
       self.timerCountNum += self.missPenaltySecond * 100
+      self.changeCoverView(UIColor.pastelLightRedColor(1))
+      self.showPenaltySecond()
     }
     updateQuestion()
+  }
+  
+  func changeCoverView(color: UIColor) {
+    UIView.animateWithDuration(0.4,
+      delay: 0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {
+        self.coverView.alpha = 1
+        self.coverView.backgroundColor = color
+      },
+      completion: nil
+    )
+    UIView.animateWithDuration(0.4,
+      delay: 0,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {
+        self.coverView.alpha = 0.0
+        self.coverView.backgroundColor = UIColor.whiteColor()
+      },
+      completion: nil
+    )
+  }
+  
+  func showPenaltySecond() {
+    var label = UILabel()
+    label.text = "+10sec"
+    label.textColor = UIColor.pastelBlueColor(1)
+    label.font = UIFont(name: ".HelveticaNeueInterface-UltraLightP2", size: 23.0)
+    label.setTranslatesAutoresizingMaskIntoConstraints(false)
+    self.questionView.addSubview(label)
+    var topConstraint = NSLayoutConstraint(item: label, attribute: .Top, relatedBy: NSLayoutRelation.Equal, toItem: self.questionView, attribute: .Top, multiplier: 1, constant: 10)
+    var leftConstraint = NSLayoutConstraint(item: label, attribute: .Leading, relatedBy: NSLayoutRelation.Equal, toItem: self.timerLabel, attribute: .Trailing, multiplier: 1, constant: 5)
+    self.questionView.addConstraints([topConstraint, leftConstraint])
+    self.view.layoutIfNeeded()
+    leftConstraint.constant += 50
+    UIView.animateWithDuration(0.5,
+      delay: 0.1,
+      options: UIViewAnimationOptions.CurveEaseIn,
+      animations: {
+        label.alpha = 0
+        self.view.layoutIfNeeded()
+      },
+      completion: { finished in
+        var constraints = self.questionView.constraints()
+        for i in 1...2 {
+          constraints.removeLast()
+        }
+        label.removeFromSuperview()
+      }
+    )
   }
   
   func backButtonTapped(sender: UIButton){

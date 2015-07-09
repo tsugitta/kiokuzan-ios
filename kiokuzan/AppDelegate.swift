@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // ▼ 1. windowの背景色にLaunchScreen.xibのviewの背景色と同じ色を設定
@@ -42,9 +41,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let transformAnimation = CAKeyframeAnimation(keyPath: "bounds")
     transformAnimation.delegate = self
     transformAnimation.duration = 1
-    transformAnimation.beginTime = CACurrentMediaTime() + 1 // 開始タイミングを1秒遅らせる
+    transformAnimation.beginTime = CACurrentMediaTime() + 0.2 // 開始タイミングを1秒遅らせる
     let initalBounds = NSValue(CGRect: topViewController.view.layer.mask.bounds)
-    let secondBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 50, height: 50))
+    let secondBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 80, height: 80))
     let finalBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 2000, height: 2000))
     transformAnimation.values = [initalBounds, secondBounds, finalBounds]
     transformAnimation.keyTimes = [0, 0.5, 1]
@@ -55,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // ▼ 6. rootViewController.viewの最前面に配置した白いviewを透化するアニメーション (完了後に親viewから削除)
     UIView.animateWithDuration(0.1,
-      delay: 1.35,
+      delay: 0.7,
       options: UIViewAnimationOptions.CurveEaseIn,
       animations: {
         maskBgView.alpha = 0.0
@@ -65,8 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     })
     
     // ▼ 7. rootViewController.viewを少し拡大して元に戻すアニメーション
-    UIView.animateWithDuration(0.25,
-      delay: 1.3,
+    UIView.animateWithDuration(0.3,
+      delay: 0.5,
       options: UIViewAnimationOptions.TransitionNone,
       animations: {
         self.window!.rootViewController!.view.transform = CGAffineTransformMakeScale(1.05, 1.05)
@@ -90,7 +89,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // remove mask when animation completes
     self.window!.rootViewController!.view.layer.mask = nil
   }
-  
 
   func applicationWillResignActive(application: UIApplication) {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -113,7 +111,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func applicationWillTerminate(application: UIApplication) {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
-
-
 }
 

@@ -21,7 +21,7 @@ class TopViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.changeConstrains()
+    self.changeConstraint()
     
     // 文字間隔調整
     let attributedText = NSMutableAttributedString(string: "kiokuzan")
@@ -61,7 +61,7 @@ class TopViewController: UIViewController {
     showHighScore(backNumber)
   }
   
-  func changeConstrains() {
+  func changeConstraint() {
     switch Double(UIScreen.mainScreen().bounds.size.height) {
     case 480:
       self.marginBottomOfTitle.constant = 70

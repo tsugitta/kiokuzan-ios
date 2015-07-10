@@ -14,14 +14,23 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
   var currentViewType = "ThreeBackRecord"
   var records: Dictionary<String, Array<Record>> = ["ThreeBackRecord": [], "FiveBackRecord": [], "TenBackRecord": []]
   
+  @IBOutlet weak var marginTopOfTitle: NSLayoutConstraint!
+  @IBOutlet weak var marginLeftOfTableView: NSLayoutConstraint!
+  @IBOutlet weak var marginRightOfTableView: NSLayoutConstraint!
+  @IBOutlet weak var marginLeftOfSegmentedControl: NSLayoutConstraint!
+  @IBOutlet weak var marginRightOfSegmentedControl: NSLayoutConstraint!
+  @IBOutlet weak var marginLeftOfBackButton: NSLayoutConstraint!
+  @IBOutlet weak var marginRightOfBackButton: NSLayoutConstraint!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    self.changeConstraint()
     self.tableView.layer.borderWidth = 1
     self.tableView.layer.borderColor = UIColor.pastelBlueColor(1).CGColor
     self.tableView.layer.cornerRadius = 4
     
-  
+    fetchRecords()
     
     tableView.delegate = self
     tableView.dataSource = self
@@ -47,9 +56,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
       .responseJSON {(request, response, JSON, error) in
         if let recordData = JSON as? Dictionary<String, AnyObject> {
           for (backNumber, recordArray) in recordData {
-            println(backNumber)
             self.records[backNumber] = []
-            println(recordArray)
             for recvRecord in recordArray as! [Dictionary<String, AnyObject>] {
               let record = Record(name: recvRecord["name"] as! String, score: recvRecord["score"] as! Int, createdDate: recvRecord["created_date"] as! String)
               self.records[backNumber]!.append(record)
@@ -62,6 +69,43 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
           alertController.addAction(defaultAction)
           self.presentViewController(alertController, animated: true, completion: nil)
         }
+    }
+  }
+  
+  @IBAction func tapBackNumber(sender: UISegmentedControl) {
+    switch sender.selectedSegmentIndex {
+    case 0:
+      self.currentViewType = "ThreeBackRecord"
+    case 1:
+      self.currentViewType = "FiveBackRecord"
+    case 2:
+      self.currentViewType = "TenBackRecord"
+    default:
+      break
+    }
+    tableView.reloadData()
+  }
+  
+  func changeConstraint() {
+    switch Double(UIScreen.mainScreen().bounds.size.height) {
+    case 480:
+      self.marginTopOfTitle.constant = 20
+      self.marginLeftOfTableView.constant = 10
+      self.marginRightOfTableView.constant = 10
+      self.marginLeftOfSegmentedControl.constant = 10
+      self.marginRightOfSegmentedControl.constant = 10
+      self.marginLeftOfBackButton.constant = 10
+      self.marginRightOfBackButton.constant = 10
+    case 568:
+      self.marginTopOfTitle.constant = 30
+      self.marginLeftOfTableView.constant = 15
+      self.marginRightOfTableView.constant = 15
+      self.marginLeftOfSegmentedControl.constant = 15
+      self.marginRightOfSegmentedControl.constant = 15
+      self.marginLeftOfBackButton.constant = 15
+      self.marginRightOfBackButton.constant = 15
+    default:
+      break
     }
   }
   

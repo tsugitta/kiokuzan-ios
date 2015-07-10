@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3A5A0BC72E80E2D7AE5C65A3 /* Pods_kiokuzan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97660AAC914474DB7ABECCF5 /* Pods_kiokuzan.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		DF08E2251B4FBC53006C8FD0 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF08E2241B4FBC53006C8FD0 /* RankingViewController.swift */; };
+		DF08E2271B4FD299006C8FD0 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF08E2261B4FD299006C8FD0 /* Record.swift */; };
 		DF2858001B4C5EBD00872A15 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF2857ED1B4C5EBC00872A15 /* Info.plist */; };
 		DF2858011B4C5EBD00872A15 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2857EE1B4C5EBC00872A15 /* LTCharacterLimbo.swift */; };
 		DF2858021B4C5EBD00872A15 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2857EF1B4C5EBC00872A15 /* LTEasing.swift */; };
@@ -69,6 +71,8 @@
 		4D4816F685701DE080D3160D /* Pods-kiokuzan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiokuzan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kiokuzan/Pods-kiokuzan.debug.xcconfig"; sourceTree = "<group>"; };
 		5129058B52FAF8C2F8F084E0 /* Pods-kiokuzan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiokuzan.release.xcconfig"; path = "Pods/Target Support Files/Pods-kiokuzan/Pods-kiokuzan.release.xcconfig"; sourceTree = "<group>"; };
 		97660AAC914474DB7ABECCF5 /* Pods_kiokuzan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiokuzan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF08E2241B4FBC53006C8FD0 /* RankingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		DF08E2261B4FD299006C8FD0 /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		DF2857ED1B4C5EBC00872A15 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF2857EE1B4C5EBC00872A15 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
 		DF2857EF1B4C5EBC00872A15 /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				DFA4665C1B4B41690061D3F5 /* ResultViewController.swift */,
+				DF08E2241B4FBC53006C8FD0 /* RankingViewController.swift */,
 				DF43C3E01B47D9F80018484B /* TopViewController.swift */,
 				DFA466481B4B025C0061D3F5 /* StartCountDownViewController.swift */,
 				DF2858111B4C7A7900872A15 /* DescriptionViewController.swift */,
@@ -284,6 +289,7 @@
 		DFA4664B1B4B09F40061D3F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DF08E2261B4FD299006C8FD0 /* Record.swift */,
 				DF43C4041B48E3A30018484B /* Question.swift */,
 			);
 			name = Model;
@@ -497,10 +503,12 @@
 				DF2858041B4C5EBD00872A15 /* LTMorphingEffect.swift in Sources */,
 				DF2858011B4C5EBD00872A15 /* LTCharacterLimbo.swift in Sources */,
 				DF2858021B4C5EBD00872A15 /* LTEasing.swift in Sources */,
+				DF08E2271B4FD299006C8FD0 /* Record.swift in Sources */,
 				DFA466551B4B1DFD0061D3F5 /* ExtensionInt.swift in Sources */,
 				DFA4664E1B4B190D0061D3F5 /* NextButtonBoard.swift in Sources */,
 				DF43C4051B48E3A30018484B /* Question.swift in Sources */,
 				DF43C4031B47F3520018484B /* InputBoard.swift in Sources */,
+				DF08E2251B4FBC53006C8FD0 /* RankingViewController.swift in Sources */,
 				DF43C3DF1B47D9F80018484B /* AppDelegate.swift in Sources */,
 				DF28580C1B4C5EBD00872A15 /* NSString+LTMorphingLabel.swift in Sources */,
 				DF2858031B4C5EBD00872A15 /* LTEmitterView.swift in Sources */,

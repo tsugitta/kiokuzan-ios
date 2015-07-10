@@ -74,15 +74,14 @@ class ResultViewController: UIViewController {
 
   @IBAction func tapRankingButton(sender: UIButton) {
     var inputTextField: UITextField!
-    let alert:UIAlertController = UIAlertController(title:"Enter your name.",
-      message: "alertView",
+    let alert:UIAlertController = UIAlertController(title:"Send score",
+      message: "Please enter your name.",
       preferredStyle: UIAlertControllerStyle.Alert)
     
     let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
       style: UIAlertActionStyle.Cancel,
       handler:{
         (action:UIAlertAction!) -> Void in
-        println("Cancel")
     })
     let defaultAction:UIAlertAction = UIAlertAction(title: "OK",
       style: UIAlertActionStyle.Default,
@@ -91,10 +90,9 @@ class ResultViewController: UIViewController {
         if inputTextField.text != "" {
           self.sendData(inputTextField.text)
         } else {
-          let alertController = UIAlertController(title: "Error", message: "Enter your name.", preferredStyle: .Alert)
+          let alertController = UIAlertController(title: "Error", message: "Name can't be blank.", preferredStyle: .Alert)
           let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
           alertController.addAction(defaultAction)
-          
           self.presentViewController(alertController, animated: true, completion: nil)
         }
     })
@@ -103,7 +101,7 @@ class ResultViewController: UIViewController {
     
     alert.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
       inputTextField = text
-      text.placeholder = "name"
+      text.placeholder = "Name"
     })
     self.presentViewController(alert, animated: true, completion: nil)
   }
@@ -128,6 +126,12 @@ class ResultViewController: UIViewController {
             var msg = (errors["best_score"] as! NSArray)[0] as! String
             self.showErrorMessage(msg)
           }
+        } else if let ranking = dicts["ranking"] as? Int {
+          let all_count = dicts["all_count"] as! Int
+          let alertController = UIAlertController(title: "Ranking", message: "Your rank is \(ranking) / \(all_count)", preferredStyle: .Alert)
+          let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+          alertController.addAction(defaultAction)
+          self.presentViewController(alertController, animated: true, completion: nil)
         }
       }
     }

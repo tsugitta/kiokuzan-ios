@@ -89,7 +89,7 @@ class ResultViewController: UIViewController {
         (action:UIAlertAction!) -> Void in
         if count(inputTextField.text) == 0 {
           self.showErrorMessage("Name can't be blank.")
-        } else if count(inputTextField.text) >= 9 {
+        } else if count(inputTextField.text) >= 10 {
           self.showErrorMessage("Name is too long.")
         } else {
           self.sendData(inputTextField.text)

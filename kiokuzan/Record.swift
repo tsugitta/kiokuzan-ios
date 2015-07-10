@@ -11,11 +11,9 @@ import UIKit
 class Record: NSObject {
   let name: String
   let scoreTime: String
-  let createdDate: String
   
-  init(name: String, score: Int, createdDate: String) {
+  init(name: String, score: Int) {
     self.name = name
-    self.scoreTime = score.convertToStringTime()
-    self.createdDate = createdDate
+    self.scoreTime = score.convertToStringTimeForRanking()
   }
 }

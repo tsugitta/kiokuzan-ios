@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="esD-fe-70G">
-                                <rect key="frame" x="56" y="164" width="263" height="343"/>
+                                <rect key="frame" x="56" y="164" width="263" height="358"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" id="lno-eQ-kfB">
@@ -39,12 +39,6 @@
                                                     <color key="textColor" red="0.094117647060000004" green="0.56862745100000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5/31" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT1-qM-ldb">
-                                                    <rect key="frame" x="233" y="14" width="27" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
-                                                    <color key="textColor" red="0.094117647060000004" green="0.56862745100000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ea8-eo-4Rq">
                                                     <rect key="frame" x="3" y="13" width="9" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
@@ -52,8 +46,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5l-vl-cnj">
-                                                    <rect key="frame" x="177" y="14" width="51" height="16"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                                    <rect key="frame" x="191" y="13" width="59" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                                     <color key="textColor" red="0.094117647060000004" green="0.56862745100000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -62,12 +56,10 @@
                                                 <constraint firstItem="f56-3F-mpK" firstAttribute="leading" secondItem="ea8-eo-4Rq" secondAttribute="trailing" constant="5" id="1Fw-Ce-p9Z"/>
                                                 <constraint firstAttribute="centerY" secondItem="ea8-eo-4Rq" secondAttribute="centerY" id="4KM-Fl-xDY"/>
                                                 <constraint firstAttribute="centerY" secondItem="D5l-vl-cnj" secondAttribute="centerY" id="9Pi-mC-vP2"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="D5l-vl-cnj" secondAttribute="trailing" constant="5" id="C4m-kt-Mbv"/>
                                                 <constraint firstAttribute="centerY" secondItem="f56-3F-mpK" secondAttribute="centerY" id="RwS-Lk-sJq"/>
-                                                <constraint firstItem="PT1-qM-ldb" firstAttribute="trailing" secondItem="OGL-X0-tLk" secondAttribute="trailingMargin" constant="5" id="Sps-fa-Td5"/>
-                                                <constraint firstAttribute="centerY" secondItem="PT1-qM-ldb" secondAttribute="centerY" id="fLb-lB-U7J"/>
                                                 <constraint firstItem="D5l-vl-cnj" firstAttribute="leading" secondItem="f56-3F-mpK" secondAttribute="trailing" constant="10" id="ifN-iF-Qpa"/>
                                                 <constraint firstItem="ea8-eo-4Rq" firstAttribute="leading" secondItem="OGL-X0-tLk" secondAttribute="leadingMargin" constant="-5" id="uca-fy-5Na"/>
-                                                <constraint firstItem="PT1-qM-ldb" firstAttribute="leading" secondItem="D5l-vl-cnj" secondAttribute="trailing" constant="5" id="zSs-6x-w0B"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -134,7 +126,7 @@
                             <constraint firstItem="YAz-XH-aG7" firstAttribute="top" secondItem="vDN-22-buZ" secondAttribute="bottom" constant="40" id="JkV-2L-mtj"/>
                             <constraint firstItem="sH7-9k-VSV" firstAttribute="top" secondItem="Zbp-6t-tN2" secondAttribute="bottom" constant="40" id="Muz-eJ-2xj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="esD-fe-70G" secondAttribute="trailing" constant="40" id="Re9-Ij-DQo"/>
-                            <constraint firstItem="OsO-3r-YZH" firstAttribute="top" secondItem="esD-fe-70G" secondAttribute="bottom" constant="20" id="TWr-Fc-Qs1"/>
+                            <constraint firstItem="OsO-3r-YZH" firstAttribute="top" secondItem="esD-fe-70G" secondAttribute="bottom" constant="5" id="TWr-Fc-Qs1"/>
                             <constraint firstItem="vDN-22-buZ" firstAttribute="leading" secondItem="Poi-km-z7Y" secondAttribute="leadingMargin" constant="40" id="UkL-Lm-2Pk"/>
                             <constraint firstAttribute="centerX" secondItem="Tkc-hF-lDk" secondAttribute="centerX" id="Z76-nt-uod"/>
                             <constraint firstItem="Tkc-hF-lDk" firstAttribute="top" secondItem="sH7-9k-VSV" secondAttribute="bottom" constant="10" id="edL-yd-jev"/>

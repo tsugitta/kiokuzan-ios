@@ -13,6 +13,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
   @IBOutlet weak var tableView: UITableView!
   var currentViewType = "ThreeBackRecord"
   var records: Dictionary<String, Array<Record>> = ["ThreeBackRecord": [], "FiveBackRecord": [], "TenBackRecord": []]
+  var currentRank: Int!
   
   @IBOutlet weak var marginTopOfTitle: NSLayoutConstraint!
   @IBOutlet weak var marginLeftOfTableView: NSLayoutConstraint!
@@ -41,13 +42,21 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
     return count(records[currentViewType]!)
   }
   
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return CGFloat(30)
+  }
+  
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell = tableView.dequeueReusableCellWithIdentifier("tableCell") as! UITableViewCell
     let record = records[currentViewType]![indexPath.row]
-    (cell.viewWithTag(1) as! UILabel).text = "\(indexPath.row + 1)."
+    if indexPath.row > 0 && record.scoreTime == records[currentViewType]![indexPath.row - 1].scoreTime {
+      (cell.viewWithTag(1) as! UILabel).text = "\(currentRank)."
+    } else {
+      (cell.viewWithTag(1) as! UILabel).text = "\(indexPath.row + 1)."
+      currentRank = indexPath.row + 1
+    }
     (cell.viewWithTag(2) as! UILabel).text = "\(record.name)"
     (cell.viewWithTag(3) as! UILabel).text = "\(record.scoreTime)"
-    (cell.viewWithTag(4) as! UILabel).text = "\(record.createdDate)"
     return cell
   }
 
@@ -58,7 +67,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
           for (backNumber, recordArray) in recordData {
             self.records[backNumber] = []
             for recvRecord in recordArray as! [Dictionary<String, AnyObject>] {
-              let record = Record(name: recvRecord["name"] as! String, score: recvRecord["score"] as! Int, createdDate: recvRecord["created_date"] as! String)
+              let record = Record(name: recvRecord["name"] as! String, score: recvRecord["score"] as! Int)
               self.records[backNumber]!.append(record)
             }
           }

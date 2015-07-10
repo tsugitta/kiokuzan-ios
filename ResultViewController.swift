@@ -88,15 +88,9 @@ class ResultViewController: UIViewController {
       handler:{
         (action:UIAlertAction!) -> Void in
         if count(inputTextField.text) == 0 {
-          let alertController = UIAlertController(title: "Error", message: "Name can't be blank.", preferredStyle: .Alert)
-          let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-          alertController.addAction(defaultAction)
-          self.presentViewController(alertController, animated: true, completion: nil)
+          self.showErrorMessage("Name can't be blank.")
         } else if count(inputTextField.text) >= 9 {
-          let alertController = UIAlertController(title: "Error", message: "Name is too long.", preferredStyle: .Alert)
-          let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-          alertController.addAction(defaultAction)
-          self.presentViewController(alertController, animated: true, completion: nil)
+          self.showErrorMessage("Name is too long.")
         } else {
           self.sendData(inputTextField.text)
         }

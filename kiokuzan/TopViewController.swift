@@ -22,7 +22,7 @@ class TopViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.changeConstrains()
-    println(UIDevice.currentDevice().identifierForVendor.UUIDString)
+    
     // 文字間隔調整
     let attributedText = NSMutableAttributedString(string: "kiokuzan")
     let customLetterSpacing = 4.5
@@ -85,37 +85,6 @@ class TopViewController: UIViewController {
     }
   }
   
-  @IBAction func testButton(sender: UIButton) {
-    var url = NSURL(string: "http://localhost:3000/records")
-    var request = NSMutableURLRequest(URL: url!)
-    
-    request.HTTPMethod = "POST"
-    
-    request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-    
-    var params: [String: AnyObject] = [
-      "name": "つぎた",
-      "score": "10000"
-    ]
-    
-    request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: nil)
-    
-    var task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-      if (error == nil) {
-        var result = NSString(data: data, encoding: NSUTF8StringEncoding)!
-        println(result)
-        let alertController = UIAlertController(title: "Hello!", message: "This is Alert sample.", preferredStyle: .Alert)
-        
-        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
-        alertController.addAction(defaultAction)
-        
-        self.presentViewController(alertController, animated: true, completion: nil)
-      }
-    })
-    task.resume()
-  }
-  
-  @IBOutlet weak var testButton: UIButton!
   @IBAction func unwindToTop(segue: UIStoryboardSegue) {
   }
   

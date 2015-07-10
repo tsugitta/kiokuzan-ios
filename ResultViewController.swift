@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Alamofire
 
 class ResultViewController: UIViewController {
   @IBOutlet weak var backLabel: UILabel!
@@ -72,7 +73,84 @@ class ResultViewController: UIViewController {
   }
 
   @IBAction func tapRankingButton(sender: UIButton) {
+    var inputTextField: UITextField!
+    let alert:UIAlertController = UIAlertController(title:"Enter your name.",
+      message: "alertView",
+      preferredStyle: UIAlertControllerStyle.Alert)
     
+    let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel",
+      style: UIAlertActionStyle.Cancel,
+      handler:{
+        (action:UIAlertAction!) -> Void in
+        println("Cancel")
+    })
+    let defaultAction:UIAlertAction = UIAlertAction(title: "OK",
+      style: UIAlertActionStyle.Default,
+      handler:{
+        (action:UIAlertAction!) -> Void in
+        if inputTextField.text != "" {
+          self.sendData(inputTextField.text)
+        } else {
+          let alertController = UIAlertController(title: "Error", message: "Enter your name.", preferredStyle: .Alert)
+          let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+          alertController.addAction(defaultAction)
+          
+          self.presentViewController(alertController, animated: true, completion: nil)
+        }
+    })
+    alert.addAction(cancelAction)
+    alert.addAction(defaultAction)
+    
+    alert.addTextFieldWithConfigurationHandler({(text:UITextField!) -> Void in
+      inputTextField = text
+      text.placeholder = "name"
+    })
+    self.presentViewController(alert, animated: true, completion: nil)
+  }
+  
+  func sendData(name: String ) {
+    var params: [String: AnyObject] = [
+      "name": name,
+      "score": self.timerCountNum,
+      "identity": UIDevice.currentDevice().identifierForVendor.UUIDString,
+      "hash_value": timerCountNum * 123 + count(name),
+      "type": "\(returnBackNumberText(self.backNumber))BackRecord"
+    ]
+    Alamofire.request(.POST, "http://localhost:4000/records", parameters: params, encoding: .JSON).responseJSON { (request, response, JSON, error) in
+      if error != nil {
+        self.showErrorMessage("Can't connect to server.")
+      } else {
+        let dicts = JSON as! NSDictionary
+        if let errors = dicts["errors"] as? NSDictionary {
+          if errors["illegal_post"] != nil {
+            self.showErrorMessage("Unknown error.")
+          } else if errors["best_score"] != nil {
+            var msg = (errors["best_score"] as! NSArray)[0] as! String
+            self.showErrorMessage(msg)
+          }
+        }
+      }
+    }
+  }
+  
+  func showErrorMessage(message: String) {
+    let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+    let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+    alertController.addAction(defaultAction)
+    self.presentViewController(alertController, animated: true, completion: nil)
+  }
+  
+  func returnBackNumberText(backNumber: Int) -> String{
+    switch backNumber {
+      case 3:
+        return "Three"
+      case 5:
+        return "Five"
+      case 10:
+        return "Ten"
+      default:
+        return ""
+    }
   }
   
   func changeConstrains() {

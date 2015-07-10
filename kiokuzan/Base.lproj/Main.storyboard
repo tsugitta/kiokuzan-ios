@@ -535,7 +535,6 @@
                         <outlet property="marginTopOfCustomView" destination="OXI-L7-PTV" id="xqD-j4-jYK"/>
                         <outlet property="marginTopOfScore" destination="5ti-jz-12a" id="iUM-mR-M45"/>
                         <outlet property="missLabel" destination="SJu-Ql-z12" id="mfd-cd-J4z"/>
-                        <outlet property="rankingButton" destination="VAp-dL-7j7" id="Vhs-bL-Ai1"/>
                         <outlet property="scoreLabel" destination="qlj-zX-AAW" id="9PB-5A-VaY"/>
                         <outlet property="scoreView" destination="PiB-rM-EHz" id="3aV-tU-O96"/>
                         <outlet property="twitterButton" destination="8Zc-Nu-EFa" id="Zom-Df-9BQ"/>

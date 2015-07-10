@@ -13,7 +13,6 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
   @IBOutlet weak var tableView: UITableView!
   var currentViewType = "ThreeBackRecord"
   var records: Dictionary<String, Array<Record>> = ["ThreeBackRecord": [], "FiveBackRecord": [], "TenBackRecord": []]
-  var currentRank: Int!
   
   @IBOutlet weak var marginTopOfTitle: NSLayoutConstraint!
   @IBOutlet weak var marginLeftOfTableView: NSLayoutConstraint!
@@ -49,12 +48,11 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     var cell = tableView.dequeueReusableCellWithIdentifier("tableCell") as! UITableViewCell
     let record = records[currentViewType]![indexPath.row]
-    if indexPath.row > 0 && record.scoreTime == records[currentViewType]![indexPath.row - 1].scoreTime {
-      (cell.viewWithTag(1) as! UILabel).text = "\(currentRank)."
-    } else {
-      (cell.viewWithTag(1) as! UILabel).text = "\(indexPath.row + 1)."
-      currentRank = indexPath.row + 1
+    var sameRank = 0
+    while indexPath.row - sameRank > 0 && record.scoreTime == records[currentViewType]![indexPath.row - 1 - sameRank].scoreTime {
+      sameRank++
     }
+    (cell.viewWithTag(1) as! UILabel).text = "\(indexPath.row + 1 - sameRank)."
     (cell.viewWithTag(2) as! UILabel).text = "\(record.name)"
     (cell.viewWithTag(3) as! UILabel).text = "\(record.scoreTime)"
     return cell

@@ -191,9 +191,9 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   func changeInputHeight() {
     switch self.screenWidth {
       case 480:
-        self.inputHeight = 300
+        self.inputHeight = 390
       default:
-        self.inputHeight = 240
+        self.inputHeight = 260
     }
   }
   

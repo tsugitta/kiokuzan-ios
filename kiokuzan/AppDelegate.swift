@@ -40,10 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // ▼ 5. rootViewController.viewのマスクを少し縮小してから、画面サイズよりも大きくなるよう拡大するアニメーション
     let transformAnimation = CAKeyframeAnimation(keyPath: "bounds")
     transformAnimation.delegate = self
-    transformAnimation.duration = 1
-    transformAnimation.beginTime = CACurrentMediaTime() + 0.2 // 開始タイミングを1秒遅らせる
+    transformAnimation.duration = 1.4
+    transformAnimation.beginTime = CACurrentMediaTime()
     let initalBounds = NSValue(CGRect: topViewController.view.layer.mask.bounds)
-    let secondBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 80, height: 80))
+    let secondBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 90, height: 90))
     let finalBounds = NSValue(CGRect: CGRect(x: 0, y: 0, width: 2000, height: 2000))
     transformAnimation.values = [initalBounds, secondBounds, finalBounds]
     transformAnimation.keyTimes = [0, 0.5, 1]

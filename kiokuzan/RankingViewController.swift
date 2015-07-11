@@ -59,7 +59,7 @@ class RankingViewController: UIViewController, UITableViewDelegate, UITableViewD
   }
 
   func fetchRecords() {
-    Alamofire.request(.GET, "http://localhost:4000/records", parameters: nil)
+    Alamofire.request(.GET, "http://52.68.207.77/records", parameters: nil)
       .responseJSON {(request, response, JSON, error) in
         if let recordData = JSON as? Dictionary<String, AnyObject> {
           for (backNumber, recordArray) in recordData {

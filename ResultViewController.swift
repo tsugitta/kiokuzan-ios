@@ -113,7 +113,7 @@ class ResultViewController: UIViewController {
       "hash_value": timerCountNum * 123 + count(name),
       "type": "\(returnBackNumberText(self.backNumber))BackRecord"
     ]
-    Alamofire.request(.POST, "http://localhost:4000/records", parameters: params, encoding: .JSON).responseJSON { (request, response, JSON, error) in
+    Alamofire.request(.POST, "http://52.68.207.77/records", parameters: params, encoding: .JSON).responseJSON { (request, response, JSON, error) in
       if error != nil {
         self.showErrorMessage("Can't connect to server.")
       } else {

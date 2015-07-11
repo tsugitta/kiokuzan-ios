@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // ▼ 1. windowの背景色にLaunchScreen.xibのviewの背景色と同じ色を設定
     self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-    self.window!.backgroundColor = UIColor(red: 230/255, green: 240/255, blue: 255/255, alpha: 1)
+    self.window!.backgroundColor = UIColor.pastelBlueColor(1.0)
     self.window!.makeKeyAndVisible()
     
     // ▼ 2. rootViewControllerをStoryBoardから設定 (今回はUItopViewControllerとしているが、他のViewControllerでも可)

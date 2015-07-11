@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // ▼ 3. rootViewController.viewをロゴ画像の形にマスクし、LaunchScreen.xibのロゴ画像と同サイズ・同位置に配置
     topViewController.view.layer.mask = CALayer()
-    topViewController.view.layer.mask.contents = UIImage(named: "idea-1000")!.CGImage
+    topViewController.view.layer.mask.contents = UIImage(named: "Idea-1000")!.CGImage
     topViewController.view.layer.mask.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
     topViewController.view.layer.mask.anchorPoint = CGPoint(x: 0.5, y: 0.5)
     topViewController.view.layer.mask.position = CGPoint(x: topViewController.view.frame.width / 2, y: topViewController.view.frame.height / 2)

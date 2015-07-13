@@ -31,7 +31,7 @@ extension Int {
     let ms = self % 100
     let s = (self - ms) / 100 % 60
     let m = (self - s - ms) / 6000 % 3600
-    return String(format: "%02d:%02d:%02d", m, s, ms)
+    return String(format: "%02d:%02d.%02d", m, s, ms)
   }
   
   func convertToStringTimeForRanking() -> String {
@@ -39,9 +39,9 @@ extension Int {
     let s = (self - ms) / 100 % 60
     let m = (self - s - ms) / 6000 % 3600
     if m == 0 {
-      return String(format: "%d:%02d", s, ms)
+      return String(format: "%d.%02d", s, ms)
     } else {
-      return String(format: "%d:%02d:%02d", m, s, ms)
+      return String(format: "%d:%02d.%02d", m, s, ms)
     }
   }
 }

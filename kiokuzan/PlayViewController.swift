@@ -37,7 +37,7 @@ class PlayViewController: UIViewController, NextButtonBoardDelegate, InputBoardD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   
+    println(self.statusBarHeight)
     // 正誤判定UIView
     self.coverView = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
     self.coverView.userInteractionEnabled = false

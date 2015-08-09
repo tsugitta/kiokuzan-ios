@@ -67,7 +67,7 @@ class ResultViewController: UIViewController {
       shareVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
     }
     shareVC.setInitialText("I scored '\(self.timerCountNum.convertToStringTime())' in the iOS game kiokuzan. #kiokuzan #\(self.backNumber)back")
-//    shareVC.addURL(NSURL("http:google.com"))
+    shareVC.addURL(NSURL(string: "https://appsto.re/jp/FDlX8.i"))
     shareVC.addImage(self.scoreImage)
     presentViewController(shareVC, animated: true, completion: nil)
   }

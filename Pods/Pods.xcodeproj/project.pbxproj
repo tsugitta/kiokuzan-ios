@@ -251,6 +251,7 @@
 		FAA26779DC08016456AD14B4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				TargetAttributes = {
 					D0B02ACD91E1E25151B617BE = {

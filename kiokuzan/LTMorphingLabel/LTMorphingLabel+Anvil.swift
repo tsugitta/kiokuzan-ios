@@ -28,15 +28,15 @@ import UIKit
 
 
 extension LTMorphingLabel {
-    
+
     func AnvilLoad() {
-        
+
         startClosures["Anvil\(LTMorphingPhaseStart)"] = {
             self.emitterView.removeAllEmit()
-            
+
             if self.newRects.count > 0 {
                 let centerRect = self.newRects[Int(self.newRects.count / 2)]
-                
+
                 self.emitterView.createEmitter("leftSmoke", duration: 0.6) {
                     (layer, cell) in
                     layer.emitterSize = CGSizeMake(1 , 1)
@@ -59,7 +59,7 @@ extension LTMorphingLabel {
                     cell.spin = 10
                     cell.alphaSpeed = -0.5 / self.morphingDuration
                 }
-                
+
                 self.emitterView.createEmitter("rightSmoke", duration: 0.6) {
                     (layer, cell) in
                     layer.emitterSize = CGSizeMake(1 , 1)
@@ -82,7 +82,7 @@ extension LTMorphingLabel {
                     cell.spin = -10
                     cell.alphaSpeed = -0.5 / self.morphingDuration
                 }
-                
+
                 self.emitterView.createEmitter("leftFragments", duration: 0.6) {
                     (layer, cell) in
                     layer.emitterSize = CGSizeMake(self.font.pointSize , 1)
@@ -102,7 +102,7 @@ extension LTMorphingLabel {
                     cell.alphaSpeed = -2
                     cell.lifetime = self.morphingDuration
                 }
-                
+
                 self.emitterView.createEmitter("rightFragments", duration: 0.6) {
                     (layer, cell) in
                     layer.emitterSize = CGSizeMake(self.font.pointSize , 1)
@@ -122,7 +122,7 @@ extension LTMorphingLabel {
                     cell.alphaSpeed = -2
                     cell.lifetime = self.morphingDuration
                 }
-                
+
                 self.emitterView.createEmitter("fragments", duration: 0.6) {
                     (layer, cell) in
                     layer.emitterSize = CGSizeMake(self.font.pointSize , 1)
@@ -144,22 +144,22 @@ extension LTMorphingLabel {
                 }
             }
         }
-        
+
         progressClosures["Anvil\(LTMorphingPhaseManipulateProgress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
-            
+
             if !isNewChar {
                 return min(1.0, max(0.0, progress))
             }
-            
+
             let j = Float(sin(Float(index))) * 1.7
             return min(1.0, max(0.0001, progress + self.morphingCharacterDelay * j))
-            
+
         }
-        
+
         effectClosures["Anvil\(LTMorphingPhaseDisappear)"] = {
-            (char:Character, index: Int, progress: Float) in
-            
+            (char: Character, index: Int, progress: Float) in
+
             return LTCharacterLimbo(
                 char: char,
                 rect: self.previousRects[index],
@@ -167,17 +167,17 @@ extension LTMorphingLabel {
                 size: self.font.pointSize,
                 drawingProgress: 0.0)
         }
-        
+
         effectClosures["Anvil\(LTMorphingPhaseAppear)"] = {
-            (char:Character, index: Int, progress: Float) in
-            
+            (char: Character, index: Int, progress: Float) in
+
             var rect = self.newRects[index]
-            
+
             if progress < 1.0 {
                 let easingValue: Float = LTEasing.easeOutBounce(progress, 0.0, 1.0)
                 rect.origin.y = CGFloat(Float(rect.origin.y) * easingValue)
             }
-            
+
             if progress > self.morphingDuration * 0.5 {
                 let end = self.morphingDuration * 0.55
                 self.emitterView.createEmitter("fragments", duration: 0.6) {_ in}.update {
@@ -199,7 +199,7 @@ extension LTMorphingLabel {
                     }
                     }.play()
             }
-            
+
             if progress > self.morphingDuration * 0.63 {
                 let end = self.morphingDuration * 0.7
                 self.emitterView.createEmitter("leftSmoke", duration: 0.6) {_ in}.update {
@@ -215,7 +215,7 @@ extension LTMorphingLabel {
                     }
                     }.play()
             }
-                
+
             return LTCharacterLimbo(
                 char: char,
                 rect: rect,
@@ -225,5 +225,5 @@ extension LTMorphingLabel {
             )
         }
     }
-    
+
 }

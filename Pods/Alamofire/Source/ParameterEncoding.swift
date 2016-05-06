@@ -90,7 +90,7 @@ public enum ParameterEncoding {
                     components += self.queryComponents(key, value)
                 }
 
-                return join("&", components.map{"\($0)=\($1)"} as [String])
+                return join("&", components.map {"\($0)=\($1)"} as [String])
             }
 
             func encodesParametersInURL(method: Method) -> Bool {
@@ -168,7 +168,7 @@ public enum ParameterEncoding {
 
         While the Core Foundation `CFURLCreateStringByAddingPercentEscapes` documentation states
         that it follows RFC 3986, the headers actually point out that it follows RFC 2396. This
-        explains why it does not consider "[", "]" and "#" to be "legal" characters even though 
+        explains why it does not consider "[", "]" and "#" to be "legal" characters even though
         they are specified as "reserved" characters in RFC 3986. The following rdar has been filed
         to hopefully get the documentation updated.
 

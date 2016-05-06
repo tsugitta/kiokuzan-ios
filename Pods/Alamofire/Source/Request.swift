@@ -187,8 +187,7 @@ public class Request {
     */
     public func cancel() {
         if let downloadDelegate = delegate as? DownloadTaskDelegate,
-            downloadTask = downloadDelegate.downloadTask
-        {
+            downloadTask = downloadDelegate.downloadTask {
             downloadTask.cancelByProducingResumeData { data in
                 downloadDelegate.resumeData = data
             }
@@ -421,9 +420,8 @@ extension Request: DebugPrintable {
             if session.configuration.HTTPShouldSetCookies {
                 if let cookieStorage = session.configuration.HTTPCookieStorage,
                     cookies = cookieStorage.cookiesForURL(URL!) as? [NSHTTPCookie]
-                    where !cookies.isEmpty
-                {
-                    let string = cookies.reduce(""){ $0 + "\($1.name)=\($1.value ?? String());" }
+                    where !cookies.isEmpty {
+                    let string = cookies.reduce("") { $0 + "\($1.name)=\($1.value ?? String());" }
                     components.append("-b \"\(string.substringToIndex(string.endIndex.predecessor()))\"")
                 }
             }
@@ -452,8 +450,7 @@ extension Request: DebugPrintable {
         }
 
         if let HTTPBody = request.HTTPBody,
-            escapedBody = NSString(data: HTTPBody, encoding: NSUTF8StringEncoding)?.stringByReplacingOccurrencesOfString("\"", withString: "\\\"")
-        {
+            escapedBody = NSString(data: HTTPBody, encoding: NSUTF8StringEncoding)?.stringByReplacingOccurrencesOfString("\"", withString: "\\\"") {
             components.append("-d \"\(escapedBody)\"")
         }
 

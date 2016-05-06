@@ -58,7 +58,7 @@ extension Request {
 
         :returns: The request.
     */
-    public func responseString(encoding: NSStringEncoding? = nil, completionHandler: (NSURLRequest, NSHTTPURLResponse?, String?, NSError?) -> Void) -> Self  {
+    public func responseString(encoding: NSStringEncoding? = nil, completionHandler: (NSURLRequest, NSHTTPURLResponse?, String?, NSError?) -> Void) -> Self {
         return response(serializer: Request.stringResponseSerializer(encoding: encoding), completionHandler: { request, response, string, error in
             completionHandler(request, response, string as? String, error)
         })

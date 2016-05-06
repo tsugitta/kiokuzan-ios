@@ -28,14 +28,14 @@ import Foundation
 
 
 public enum LTCharacterDiffType: Int, DebugPrintable {
-    
+
     case Same = 0
     case Add = 1
     case Delete
     case Move
     case MoveAndAdd
     case Replace
-    
+
     public var debugDescription: String {
     get {
         switch self {
@@ -54,16 +54,16 @@ public enum LTCharacterDiffType: Int, DebugPrintable {
         }
     }
     }
-    
+
 }
 
 
 public struct LTCharacterDiffResult: DebugPrintable {
-    
+
     public var diffType: LTCharacterDiffType = .Add
     public var moveOffset: Int = 0
     public var skip: Bool = false
-    
+
     public var debugDescription: String {
     get {
         switch diffType {
@@ -82,29 +82,29 @@ public struct LTCharacterDiffResult: DebugPrintable {
         }
     }
     }
-    
+
 }
 
 
 public func >>(lhs: String, rhs: String) -> [LTCharacterDiffResult] {
-    
+
     let newChars = enumerate(rhs)
     let lhsLength = count(lhs)
     let rhsLength = count(rhs)
     var skipIndexes = [Int]()
     let leftChars = Array(lhs)
-    
+
     let maxLength = max(lhsLength, rhsLength)
     var diffResults: [LTCharacterDiffResult] = Array(count: maxLength, repeatedValue: LTCharacterDiffResult())
-    
+
     for i in 0..<maxLength {
         // If new string is longer than the original one
         if i > lhsLength - 1 {
             continue
         }
-        
+
         let leftChar = leftChars[i]
-        
+
         // Search left character in the new string
         var foundCharacterInRhs = false
         for (j, newChar) in newChars {
@@ -117,11 +117,11 @@ public func >>(lhs: String, rhs: String) -> [LTCharacterDiffResult] {
                 }
                 return false
                 }(j)
-            
+
             if currentCharWouldBeReplaced {
                 continue
             }
-            
+
             if leftChar == newChar {
                 skipIndexes.append(j)
                 foundCharacterInRhs = true
@@ -140,7 +140,7 @@ public func >>(lhs: String, rhs: String) -> [LTCharacterDiffResult] {
                 break
             }
         }
-        
+
         if !foundCharacterInRhs {
             if i < count(rhs) - 1 {
                 diffResults[i].diffType = .Replace
@@ -149,7 +149,7 @@ public func >>(lhs: String, rhs: String) -> [LTCharacterDiffResult] {
             }
         }
     }
-    
+
     var i = 0
     for result in diffResults {
         switch result.diffType {
@@ -160,7 +160,7 @@ public func >>(lhs: String, rhs: String) -> [LTCharacterDiffResult] {
         }
         i++
     }
-    
+
     return diffResults
-    
+
 }

@@ -14,7 +14,7 @@ class QuestionView: UIView {
     self.customViewCommonInit()
   }
 
-  func customViewCommonInit(){
+  func customViewCommonInit() {
     let view = NSBundle.mainBundle().loadNibNamed("QuestionView", owner: self, options: nil).first as! UIView
     view.frame = self.bounds
     view.setTranslatesAutoresizingMaskIntoConstraints(true)
@@ -28,12 +28,12 @@ class QuestionView: UIView {
 //  let screenHeight: Double = Double(UIScreen.mainScreen().bounds.size.height) // 画面の縦
 //  var viewHeight: Double! // ビューの高さ
 //  var delegate: NextButtonBoardDelegate?
-//  
+//
 //  init(inputBoardHeight: Double) {
 //    viewHeight = screenHeight - inputBoardHeight
 //    super.init(frame: CGRect(x: 0, y: 0, width: screenWidth, height: viewHeight))
 //    self.backgroundColor = UIColor.PastelBlueColor(0.1)
-//    
+//
 //    var button = UIButton()
 //    // ボタンの横幅
 //    var buttonWidth = screenWidth / 2
@@ -57,11 +57,11 @@ class QuestionView: UIView {
 //    // ボタン配置
 //    self.addSubview(button)
 //  }
-//  
+//
 //  required init(coder aDecoder: NSCoder) {
 //    fatalError("init(coder:) has not been implemented")
 //  }
-//  
+//
 //  // ボタンタップメソッド
 //  func buttonTapped(sender:UIButton){
 //    self.delegate?.goNext()

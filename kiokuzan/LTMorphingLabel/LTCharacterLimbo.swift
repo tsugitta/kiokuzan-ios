@@ -10,13 +10,13 @@ import UIKit
 
 
 public struct LTCharacterLimbo: DebugPrintable {
-    
+
     public let char: Character
     public var rect: CGRect
     public var alpha: CGFloat
     public var size: CGFloat
     public var drawingProgress: CGFloat = 0.0
-    
+
     public var debugDescription: String {
         get {
             return "Character: '\(char)'"
@@ -26,5 +26,5 @@ public struct LTCharacterLimbo: DebugPrintable {
                 + "and \(size)pt font."
         }
     }
-    
+
 }

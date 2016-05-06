@@ -33,7 +33,7 @@ public extension String {
 public func htmlToAttributedString(text: String) -> NSAttributedString! {
     let htmlData = text.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
     let htmlString = NSAttributedString(data: htmlData!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil, error: nil)
-    
+
     return htmlString
 }
 
@@ -41,7 +41,7 @@ public func degreesToRadians(degrees: CGFloat) -> CGFloat {
     return degrees * CGFloat(M_PI / 180)
 }
 
-public func delay(delay:Double, closure:()->()) {
+public func delay(delay: Double, closure:()->()) {
     dispatch_after(
         dispatch_time(
             DISPATCH_TIME_NOW,
@@ -58,12 +58,12 @@ public func imageFromURL(URL: String) -> UIImage {
 
 public extension UIColor {
     convenience init(hex: String) {
-        var red:   CGFloat = 0.0
+        var red: CGFloat = 0.0
         var green: CGFloat = 0.0
-        var blue:  CGFloat = 0.0
+        var blue: CGFloat = 0.0
         var alpha: CGFloat = 1.0
-        var hex:   String = hex
-        
+        var hex: String = hex
+
         if hex.hasPrefix("#") {
             let index   = advance(hex.startIndex, 1)
             hex         = hex.substringFromIndex(index)
@@ -102,7 +102,7 @@ public extension UIColor {
 }
 
 public func rgbaToUIColor(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
-    
+
     return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 }
 
@@ -131,18 +131,18 @@ public func dateFromString(date: String, format: String) -> NSDate {
     }
 }
 
-public func randomStringWithLength (len : Int) -> NSString {
-    
-    let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    
-    var randomString : NSMutableString = NSMutableString(capacity: len)
-    
-    for (var i=0; i < len; i++){
+public func randomStringWithLength (len: Int) -> NSString {
+
+    let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+    var randomString: NSMutableString = NSMutableString(capacity: len)
+
+    for (var i=0; i < len; i++) {
         var length = UInt32 (letters.length)
         var rand = arc4random_uniform(length)
         randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
     }
-    
+
     return randomString
 }
 
@@ -153,51 +153,51 @@ public func timeAgoSinceDate(date:NSDate, numericDates:Bool) -> String {
     let earliest = now.earlierDate(date)
     let latest = now.laterDate(date)
     let components:NSDateComponents = calendar.components(unitFlags, fromDate: earliest, toDate: latest, options: nil)
-    
+
     if (components.year >= 2) {
         return "\(components.year)y"
-    } else if (components.year >= 1){
-        if (numericDates){
+    } else if (components.year >= 1) {
+        if (numericDates) {
             return "1y"
         } else {
             return "1y"
         }
     } else if (components.month >= 2) {
         return "\(components.month * 4)w"
-    } else if (components.month >= 1){
-        if (numericDates){
+    } else if (components.month >= 1) {
+        if (numericDates) {
             return "4w"
         } else {
             return "4w"
         }
     } else if (components.weekOfYear >= 2) {
         return "\(components.weekOfYear)w"
-    } else if (components.weekOfYear >= 1){
-        if (numericDates){
+    } else if (components.weekOfYear >= 1) {
+        if (numericDates) {
             return "1w"
         } else {
             return "1w"
         }
     } else if (components.day >= 2) {
         return "\(components.day)d"
-    } else if (components.day >= 1){
-        if (numericDates){
+    } else if (components.day >= 1) {
+        if (numericDates) {
             return "1d"
         } else {
             return "1d"
         }
     } else if (components.hour >= 2) {
         return "\(components.hour)h"
-    } else if (components.hour >= 1){
-        if (numericDates){
+    } else if (components.hour >= 1) {
+        if (numericDates) {
             return "1h"
         } else {
             return "1h"
         }
     } else if (components.minute >= 2) {
         return "\(components.minute)m"
-    } else if (components.minute >= 1){
-        if (numericDates){
+    } else if (components.minute >= 1) {
+        if (numericDates) {
             return "1m"
         } else {
             return "1m"
@@ -207,5 +207,5 @@ public func timeAgoSinceDate(date:NSDate, numericDates:Bool) -> String {
     } else {
         return "now"
     }
-    
+
 }

@@ -41,7 +41,7 @@ public class SpringLabel: UILabel, Springable {
     public var opacity: CGFloat = 1
     public var animateFrom: Bool = false
 
-    lazy private var spring : Spring = Spring(self)
+    lazy private var spring: Spring = Spring(self)
 
     override public func awakeFromNib() {
         super.awakeFromNib()

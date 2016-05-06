@@ -9,11 +9,11 @@
 import UIKit
 
 class Record: NSObject {
-  let name: String
-  let scoreTime: String
-  
-  init(name: String, score: Int) {
-    self.name = name
-    self.scoreTime = score.convertToStringTimeForRanking()
-  }
+    let name: String
+    let scoreTime: String
+
+    init(name: String, score: Int) {
+        self.name = name
+        self.scoreTime = score.convertToStringTimeForRanking()
+    }
 }

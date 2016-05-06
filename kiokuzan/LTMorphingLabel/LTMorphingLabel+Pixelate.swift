@@ -28,12 +28,12 @@ import UIKit
 
 
 extension LTMorphingLabel {
-    
+
     func PixelateLoad() {
-        
+
         effectClosures["Pixelate\(LTMorphingPhaseDisappear)"] = {
-            (char:Character, index: Int, progress: Float) in
-            
+            (char: Character, index: Int, progress: Float) in
+
             return LTCharacterLimbo(
                 char: char,
                 rect: self.previousRects[index],
@@ -41,10 +41,10 @@ extension LTMorphingLabel {
                 size: self.font.pointSize,
                 drawingProgress: CGFloat(progress))
         }
-        
+
         effectClosures["Pixelate\(LTMorphingPhaseAppear)"] = {
-            (char:Character, index: Int, progress: Float) in
-            
+            (char: Character, index: Int, progress: Float) in
+
             return LTCharacterLimbo(
                 char: char,
                 rect: self.newRects[index],
@@ -53,24 +53,24 @@ extension LTMorphingLabel {
                 drawingProgress: CGFloat(1.0 - progress)
             )
         }
-        
+
         drawingClosures["Pixelate\(LTMorphingPhaseDraw)"] = {
             (charLimbo: LTCharacterLimbo) in
-            
+
             if charLimbo.drawingProgress > 0.0 {
-                
+
                 let charImage = self.pixelateImageForCharLimbo(charLimbo, withBlurRadius: charLimbo.drawingProgress * 6.0)
-                
+
                 let charRect = charLimbo.rect
                 charImage.drawInRect(charLimbo.rect)
-                
+
                 return true
             }
-            
+
             return false
         }
     }
-    
+
     private func pixelateImageForCharLimbo(charLimbo: LTCharacterLimbo, withBlurRadius blurRadius: CGFloat) -> UIImage {
         let scale = min(UIScreen.mainScreen().scale, 1.0 / blurRadius)
         UIGraphicsBeginImageContextWithOptions(charLimbo.rect.size, false, scale)
@@ -83,9 +83,9 @@ extension LTMorphingLabel {
             NSForegroundColorAttributeName: self.textColor.colorWithAlphaComponent(fadeOutAlpha)
             ])
 //        CGContextSetShouldAntialias(context, true)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         return newImage
     }
-    
+
 }

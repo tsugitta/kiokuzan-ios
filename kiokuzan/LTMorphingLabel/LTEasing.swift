@@ -15,25 +15,25 @@ import Foundation
 // d = duration
 
 public class LTEasing {
-    
+
     public class func easeOutQuint(t: Float, _ b: Float, _ c: Float, _ d: Float = 1.0) -> Float {
         return {
             return c * ($0 * $0 * $0 * $0 * $0 + 1.0) + b
             }(t / d - 1.0)
     }
-    
+
     public class func easeInQuint(t: Float, _ b: Float, _ c: Float, _ d: Float = 1.0) -> Float {
         return {
             return c * $0 * $0 * $0 * $0 * $0 + b
             }(t / d)
     }
-    
+
     public class func easeOutBack(t: Float, _ b: Float, _ c: Float, _ d: Float = 1.0) -> Float {
         let s: Float = 2.70158
         let t2: Float = t / d - 1.0
         return Float(c * (t2 * t2 * ((s + 1.0) * t2 + s) + 1.0)) + b
     }
-    
+
     public class func easeOutBounce(t: Float, _ b: Float, _ c: Float, _ d: Float = 1.0) -> Float {
         return {
             if $0 < 1 / 2.75 {

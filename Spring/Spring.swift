@@ -23,10 +23,10 @@
 import UIKit
 
 @objc public protocol Springable {
-    var autostart: Bool  { get set }
-    var autohide: Bool  { get set }
-    var animation: String  { get set }
-    var force: CGFloat  { get set }
+    var autostart: Bool { get set }
+    var autohide: Bool { get set }
+    var animation: String { get set }
+    var force: CGFloat { get set }
     var delay: CGFloat { get set }
     var duration: CGFloat { get set }
     var damping: CGFloat { get set }
@@ -42,19 +42,19 @@ import UIKit
     var curve: String { get set }
 
     // UIView
-    var layer : CALayer { get }
-    var transform : CGAffineTransform { get set }
-    var alpha : CGFloat { get set }
-    
+    var layer: CALayer { get }
+    var transform: CGAffineTransform { get set }
+    var alpha: CGFloat { get set }
+
     func animate()
     func animateNext(completion: () -> ())
     func animateTo()
     func animateToNext(completion: () -> ())
 }
 
-public class Spring : NSObject {
+public class Spring: NSObject {
 
-    private unowned var view : Springable
+    private unowned var view: Springable
     private var shouldAnimateAfterActive = false
 
     init(_ view: Springable) {
@@ -98,8 +98,8 @@ public class Spring : NSObject {
     private var curve: String { set { self.view.curve = newValue } get { return self.view.curve }}
 
     // UIView
-    private var layer : CALayer { return view.layer }
-    private var transform : CGAffineTransform { get { return view.transform } set { view.transform = newValue }}
+    private var layer: CALayer { return view.layer }
+    private var transform: CGAffineTransform { get { return view.transform } set { view.transform = newValue }}
     private var alpha: CGFloat { get { return view.alpha } set { view.alpha = newValue } }
 
     func animatePreset() {
@@ -107,7 +107,7 @@ public class Spring : NSObject {
         if animation == "" {
             return
         }
-        
+
         switch animation {
         case "slideLeft":
             x = 300*force
@@ -415,13 +415,13 @@ public class Spring : NSObject {
             completion()
         }
     }
-    
+
     public func customAwakeFromNib() {
         if autohide {
             alpha = 0
         }
     }
-    
+
     public func customDidMoveToWindow() {
 
         if autostart {
@@ -453,8 +453,7 @@ public class Spring : NSObject {
             initialSpringVelocity: velocity,
             options: getAnimationOptions(curve),
             animations: { [weak self] in
-            if let _self = self
-            {
+            if let _self = self {
                 if _self.animateFrom {
                     _self.transform = CGAffineTransformIdentity
                     _self.alpha = 1
@@ -465,19 +464,19 @@ public class Spring : NSObject {
                     let rotate = CGAffineTransformMakeRotation(_self.rotate)
                     let translateAndScale = CGAffineTransformConcat(translate, scale)
                     _self.transform = CGAffineTransformConcat(rotate, translateAndScale)
-                    
+
                     _self.alpha = _self.opacity
                 }
-                
+
             }
-            
+
             }, completion: { [weak self] finished in
-                
+
                 completion()
                 self?.resetAll()
-                
+
             })
-        
+
     }
 
     func reset() {

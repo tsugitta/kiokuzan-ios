@@ -61,7 +61,7 @@ extension Request {
 
         :returns: The request.
     */
-    public func validate<S : SequenceType where S.Generator.Element == Int>(statusCode acceptableStatusCode: S) -> Self {
+    public func validate<S: SequenceType where S.Generator.Element == Int>(statusCode acceptableStatusCode: S) -> Self {
         return validate { _, response in
             return contains(acceptableStatusCode, response.statusCode)
         }
@@ -77,8 +77,7 @@ extension Request {
             let components = string.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).substringToIndex(string.rangeOfString(";")?.endIndex ?? string.endIndex).componentsSeparatedByString("/")
 
             if let type = components.first,
-                subtype = components.last
-            {
+                subtype = components.last {
                 self.type = type
                 self.subtype = subtype
             } else {
@@ -105,15 +104,13 @@ extension Request {
 
         :returns: The request.
     */
-    public func validate<S : SequenceType where S.Generator.Element == String>(contentType acceptableContentTypes: S) -> Self {
+    public func validate<S: SequenceType where S.Generator.Element == String>(contentType acceptableContentTypes: S) -> Self {
         return validate { _, response in
             if let responseContentType = response.MIMEType,
-                responseMIMEType = MIMEType(responseContentType)
-            {
+                responseMIMEType = MIMEType(responseContentType) {
                 for contentType in acceptableContentTypes {
                     if let acceptableMIMEType = MIMEType(contentType)
-                        where acceptableMIMEType.matches(responseMIMEType)
-                    {
+                        where acceptableMIMEType.matches(responseMIMEType) {
                         return true
                     }
                 }

@@ -15,10 +15,10 @@ public class AutoTextView: UITextView {
         if text.length == 0 {
             size.height = 0
         }
-        
+
         contentInset = UIEdgeInsetsMake(-4, -4, -4, -4)
         layoutIfNeeded()
-        
+
         return size
     }
 }

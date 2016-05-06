@@ -41,18 +41,18 @@ public class SpringView: UIView, Springable {
     public var opacity: CGFloat = 1
     public var animateFrom: Bool = false
 
-    lazy private var spring : Spring = Spring(self)
+    lazy private var spring: Spring = Spring(self)
 
     override public func awakeFromNib() {
         super.awakeFromNib()
         self.spring.customAwakeFromNib()
     }
-    
+
     override public func didMoveToWindow() {
         super.didMoveToWindow()
         self.spring.customDidMoveToWindow()
     }
-    
+
     public func animate() {
         self.spring.animate()
     }

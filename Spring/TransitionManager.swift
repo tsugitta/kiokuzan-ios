@@ -23,15 +23,15 @@
 import UIKit
 
 public class TransitionManager: NSObject, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
-    
+
     var isPresenting = true
     var duration = 0.3
-    
+
     public func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         let container = transitionContext.containerView()
         let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-        
+
         if isPresenting {
             toView.frame = container.bounds
             toView.transform = CGAffineTransformMakeTranslation(0, container.frame.size.height)
@@ -64,21 +64,21 @@ public class TransitionManager: NSObject, UIViewControllerTransitioningDelegate,
                 toView.alpha = 1
             }
         }
-        
+
         delay(duration, {
             transitionContext.completeTransition(true)
         })
     }
-    
+
     public func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
         return duration
     }
-    
+
     public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresenting = true
         return self
     }
-    
+
     public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresenting = false
         return self
